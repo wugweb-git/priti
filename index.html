@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priti Tiwari — Marketing &amp; Brand Strategist</title>
-<meta name="description" content="Priti Tiwari — Marketing & Brand Strategist across F&B, Hospitality, Beauty, Fashion & Lifestyle. Building brands through strategy, storytelling, culture & growth.">
+<title>Priti Tiwari — Brands Hard to Ignore</title>
+<meta name="description" content="Priti Tiwari — marketing strategist and brand builder across F&B, hospitality and lifestyle. Categories where the experience is the product.">
 <link rel="canonical" href="https://wugweb-git.github.io/priti/">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Priti Tiwari — Marketing &amp; Brand Strategist">
-<meta property="og:description" content="Marketing &amp; Brand Strategist across F&amp;B, Hospitality, Beauty, Fashion &amp; Lifestyle.">
-<meta property="og:url" content="https://wugweb-git.github.io/priti/">
+<meta property="og:title" content="Priti Tiwari — Brands Hard to Ignore">
+<meta property="og:description" content="Marketing strategist. Brand builder. Professional overthinker of good ideas. F&amp;B, hospitality and lifestyle brands where the experience is the product.">
 <meta property="og:image" content="https://wugweb-git.github.io/priti/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://wugweb-git.github.io/priti/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Priti Tiwari — Marketing &amp; Brand Strategist">
-<meta name="twitter:description" content="Marketing &amp; Brand Strategist across F&amp;B, Hospitality, Beauty, Fashion &amp; Lifestyle.">
+<meta name="twitter:title" content="Priti Tiwari — Brands Hard to Ignore">
+<meta name="twitter:description" content="Marketing strategist. Brand builder. Professional overthinker of good ideas.">
 <meta name="twitter:image" content="https://wugweb-git.github.io/priti/assets/og.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F6F1E6'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23E5432B'>P</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2318160F'/><text x='16' y='23' font-size='20' font-family='Georgia,serif' font-weight='900' fill='%23E5432B' text-anchor='middle'>P</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -32,6 +34,7 @@
   --butter:#F0BD3E;
   --cobalt:#2743D6;
   --coral:#F0789A;
+  --coral-dim:#B83D63;
   --olive:#6B6B3A;
   --sand:#C9B48C;
   --line: rgba(24,22,15,0.14);
@@ -144,8 +147,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
   font-size:11px;
   letter-spacing:0.08em;
   text-transform:uppercase;
-  color:var(--tomato);
-  border:1.5px solid var(--tomato);
+  color:var(--tomato-dim);
+  border:1.5px solid var(--tomato-dim);
   padding:3px 9px;
   border-radius:999px;
   display:inline-block;
@@ -263,7 +266,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
   border:1px dashed var(--line-strong); padding:10px 16px; display:inline-flex; align-items:center; gap:10px;
   background:var(--paper);
 }
-.rotating-badge .rb-word{color:var(--tomato); min-width:82px; display:inline-block; transition:opacity .35s ease;}
+.rotating-badge .rb-word{color:var(--tomato-dim); min-width:82px; display:inline-block; transition:opacity .35s ease;}
 
 /* ============================= NOT JUST SOCIAL ============================= */
 .njs{
@@ -320,12 +323,54 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 }
 .receipt-label{
   font-family:var(--f-mono); font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase;
-  margin-top:10px; opacity:0.72;
+  margin-top:10px; opacity:0.88;
 }
 .receipts-foot{
   margin-top:18px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
-  font-family:var(--f-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.55;
+  font-family:var(--f-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.75;
 }
+
+
+/* ---------- Selected Work (lead layer) ---------- */
+.sw-list{list-style:none; margin:40px 0 0; padding:0; counter-reset:none;}
+.sw-item{border-top:1px solid var(--line);}
+.sw-item:last-child{border-bottom:1px solid var(--line);}
+.sw-item > a{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:clamp(14px,3vw,32px);
+  align-items:baseline;
+  padding:clamp(18px,2.4vw,26px) 0;
+  transition:background-color .2s ease, padding-left .2s ease;
+}
+.sw-item > a:hover, .sw-item > a:focus-visible{
+  background:rgba(24,22,15,0.035);
+  padding-left:12px;
+}
+.sw-num{font-family:var(--f-mono); font-size:12px; letter-spacing:.1em; opacity:.55;}
+.sw-body{display:block; min-width:0;}
+.sw-brand{
+  display:block; font-family:var(--f-display); font-weight:600;
+  font-size:clamp(21px,3.2vw,34px); line-height:1.1; letter-spacing:-0.01em;
+}
+.sw-prev{font-family:var(--f-sans); font-size:.45em; font-weight:500; opacity:.6; white-space:nowrap;}
+.sw-meta{
+  display:block; margin-top:8px; font-family:var(--f-mono); font-size:11.5px;
+  letter-spacing:.06em; text-transform:uppercase; opacity:.62; line-height:1.5;
+}
+.sw-line{display:block; margin-top:10px; font-size:15px; line-height:1.55; opacity:.85; max-width:60ch;}
+.sw-proof{
+  font-family:var(--f-mono); font-size:11.5px; letter-spacing:.06em;
+  text-transform:uppercase; white-space:nowrap; color:var(--tomato-dim);
+  border:1px solid currentColor; padding:5px 10px; align-self:center;
+}
+@media (max-width:720px){
+  .sw-item > a{grid-template-columns:auto 1fr; row-gap:12px;}
+  .sw-proof{grid-column:2; justify-self:start; align-self:start;}
+}
+
+/* capability filters sit after the industry filters */
+.filter-sep{width:1px; align-self:stretch; background:var(--line); margin:0 4px;}
 
 /* ============================= WHERE I'VE PLAYED (INDUSTRIES) ============================= */
 .industries-intro{padding:clamp(72px,11vw,130px) var(--pad) 40px; background:var(--ivory);}
@@ -336,7 +381,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
   display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:44px;
   font-family:var(--f-mono); font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;
 }
-.industries-index a{opacity:0.55; transition:opacity .2s ease, color .2s ease;}
+.industries-index a{opacity:0.78; transition:opacity .2s ease, color .2s ease;}
 .industries-index a:hover{opacity:1; color:var(--tomato);}
 
 .industry-block{
@@ -345,7 +390,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
   position:relative;
 }
 .industry-head{max-width:var(--container); margin:0 auto; display:flex; gap:28px; align-items:baseline; flex-wrap:wrap;}
-.industry-num{font-family:var(--f-mono); font-size:14px; letter-spacing:0.05em; opacity:0.5;}
+.industry-num{font-family:var(--f-mono); font-size:14px; letter-spacing:0.05em; opacity:0.72;}
 .industry-name{font-family:var(--f-display); font-weight:900; font-size:clamp(34px,5.5vw,60px);}
 .industry-line{font-family:var(--f-hand); font-size:19px; margin-left:auto; opacity:0.85;}
 .industry-body{max-width:var(--container); margin:34px auto 0;}
@@ -363,7 +408,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 }
 .bf-eyebrow{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:14px;}
 .bf-title{font-family:var(--f-display); font-weight:900; font-size:clamp(28px,3.6vw,42px);}
-.bf-why-label{font-family:var(--f-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.5; margin-top:22px;}
+.bf-why-label{font-family:var(--f-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.72; margin-top:22px;}
 .bf-why{margin-top:8px; font-size:15.5px; line-height:1.6;}
 .bf-did{margin-top:18px; display:flex; flex-wrap:wrap; gap:8px;}
 .bf-did span{
@@ -380,13 +425,13 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 }
 .brand-card:hover{transform:translateY(-3px); box-shadow:5px 5px 0 var(--line-strong);}
 .brand-card .bc-name{font-family:var(--f-display); font-weight:600; font-size:20px;}
-.brand-card .bc-role{font-family:var(--f-mono); font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.55; margin-top:8px;}
-.brand-card .bc-note{font-size:13.5px; margin-top:12px; opacity:0.8; line-height:1.5;}
+.brand-card .bc-role{font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.78; margin-top:8px;}
+.brand-card .bc-note{font-size:13.5px; margin-top:12px; opacity:0.9; line-height:1.5;}
 .brand-card .bc-status{margin-top:14px;}
 
 /* other-brands chip archive at end of industry */
 .other-brands{margin-top:34px;}
-.other-brands .ob-label{font-family:var(--f-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.5; margin-bottom:12px;}
+.other-brands .ob-label{font-family:var(--f-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.72; margin-bottom:12px;}
 .chip-row{display:flex; flex-wrap:wrap; gap:10px;}
 .chip{
   font-family:var(--f-mono); font-size:12px; letter-spacing:0.04em;
@@ -401,7 +446,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 .ind-fnb .receipt-num, .ind-fnb .bf-title{color:var(--tomato);}
 .ind-hosp{background:var(--ivory);}
 .ind-beauty{background:linear-gradient(180deg, var(--ivory) 0%, #F3ECEF 100%);}
-.ind-beauty .bf-title{color:var(--coral);}
+.ind-beauty .bf-title{color:var(--coral-dim);}
 .ind-fashion{background:var(--charcoal); color:var(--ivory);}
 .ind-fashion .bf-title{color:var(--butter);}
 .ind-fashion .brand-feature, .ind-fashion .brand-card{background:var(--charcoal-2); border-color:var(--line-light);}
@@ -419,29 +464,35 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 
 /* Hospitality dual-vertical */
 .hosp-split{display:grid; grid-template-columns:1fr; gap:56px;}
-.hosp-sub{padding-top:8px;}
-.hosp-sub-head{display:flex; align-items:center; gap:14px; margin-bottom:22px;}
+/* grid children default to min-width:auto, which lets wide content blow the
+   track past the container — this is what caused the desktop h-scroll */
+.hosp-split > *, .brand-feature > *, .celeb-panel > *, .cs-block-inner > *{min-width:0;}
+.hosp-sub{padding-top:8px; min-width:0;}
+.hosp-sub-head{display:flex; align-items:center; gap:14px; margin-bottom:22px; flex-wrap:wrap;}
+.hosp-sub-head .eyebrow{flex-wrap:wrap;}
 .hosp-sub-tag{
   font-family:var(--f-mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
   padding:5px 10px; border:1px solid var(--charcoal);
 }
 .hosp-sub-title{font-family:var(--f-display); font-weight:700; font-size:clamp(22px,2.8vw,30px);}
-.hosp-restaurants .hosp-sub-tag{background:var(--tomato); color:var(--ivory); border-color:var(--tomato);}
+.hosp-restaurants .hosp-sub-tag{background:var(--tomato-dim); color:var(--ivory); border-color:var(--tomato-dim);}
 .hosp-properties .hosp-sub-tag{background:var(--olive); color:var(--ivory); border-color:var(--olive);}
 
 /* Placeholder / coming next badge */
 .coming-next{
   display:inline-flex; align-items:center; gap:8px;
   font-family:var(--f-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase;
-  color:var(--tomato-dim); border:1px dashed var(--tomato); padding:6px 10px;
+  color:var(--tomato-dim); border:1px dashed var(--tomato-dim); padding:6px 10px; font-weight:700;
 }
 .ind-fashion .coming-next{color:var(--butter); border-color:var(--butter);}
+/* on charcoal surfaces the dim tomato drops below AA — butter carries it */
+.ind-fashion .stamp, .case-study .stamp, .njs .stamp{color:var(--butter); border-color:var(--butter);}
 
 /* upload placeholder slot */
 .upload-slot{
   border:1.5px dashed var(--line-strong);
   padding:26px; text-align:center;
-  font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.55;
+  font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.78;
   display:flex; flex-direction:column; align-items:center; gap:8px;
 }
 .upload-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-top:16px;}
@@ -467,7 +518,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
   border:1px dashed var(--line-light-strong); padding:8px 14px; color:var(--butter);
 }
 .cs-title{
-  margin-top:26px;
+  margin-top:26px; overflow-wrap:break-word;
   font-size:clamp(42px,8vw,110px);
   color:var(--ivory);
 }
@@ -476,7 +527,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
   margin-top:18px; font-family:var(--f-display); font-style:italic; font-weight:500;
   font-size:clamp(22px,3.2vw,34px); color:var(--sand);
 }
-.cs-meta{margin-top:36px; display:flex; gap:28px; flex-wrap:wrap; font-family:var(--f-mono); font-size:12px; letter-spacing:0.05em; text-transform:uppercase; opacity:0.6;}
+.cs-meta{margin-top:36px; display:flex; gap:28px; flex-wrap:wrap; font-family:var(--f-mono); font-size:12px; letter-spacing:0.05em; text-transform:uppercase; opacity:0.78;}
 
 .cs-block{
   padding:clamp(48px,8vw,88px) var(--pad);
@@ -528,7 +579,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 .result-cell{flex:1; min-width:160px; padding:28px 24px; border-right:1px dashed var(--line-light-strong);}
 .result-cell:last-child{border-right:none;}
 .result-num{font-family:var(--f-display); font-weight:900; font-size:clamp(34px,4vw,48px); color:var(--butter);}
-.result-label{font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.6; margin-top:8px;}
+.result-label{font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.78; margin-top:8px;}
 
 .cs-takeaway{
   padding:clamp(80px,14vw,160px) var(--pad);
@@ -576,7 +627,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 }
 .arc-item:hover{background:var(--charcoal-2);}
 .arc-item .arc-name{font-family:var(--f-display); font-weight:700; font-size:19px;}
-.arc-item .arc-cat{font-family:var(--f-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.5; margin-top:8px;}
+.arc-item .arc-cat{font-family:var(--f-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.72; margin-top:8px;}
 .arc-hover{
   position:absolute; inset:0; background:var(--tomato); color:var(--ivory);
   padding:20px; display:flex; flex-direction:column; justify-content:space-between;
@@ -594,7 +645,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 .about-body p{font-size:16.5px; line-height:1.8; margin-top:20px; max-width:520px;}
 .about-facts{border-top:1px solid var(--line); padding-top:24px;}
 .about-fact{display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px dashed var(--line); font-family:var(--f-mono); font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase;}
-.about-fact span:last-child{opacity:0.6; text-align:right;}
+.about-fact span:last-child{opacity:0.8; text-align:right;}
 
 /* ============================= CONTACT ============================= */
 .contact{padding:clamp(90px,15vw,180px) var(--pad); background:var(--charcoal); color:var(--ivory); text-align:center;}
@@ -606,31 +657,12 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 44px; border-top:1px solid var(--line-light);}
 .footer-inner{max-width:var(--container); margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; align-items:center;}
 .footer-logo{font-family:var(--f-display); font-weight:800; font-size:16px;}
-.footer-role{font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.6;}
+.footer-role{font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.8;}
 .footer-note{font-family:var(--f-hand); font-size:17px; color:var(--sand);}
 
-/* ============================= SCROLL REVEAL ============================= */
-.reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
-.reveal.in-view{opacity:1; transform:translateY(0);}
-
-/* ============================= RESPONSIVE ============================= */
-@media (max-width: 860px){
-  .nav-links{display:none;}
-  .nav-burger{display:flex;}
-  .brand-feature{grid-template-columns:1fr;}
-  .hosp-split{gap:44px;}
-  .about-inner{grid-template-columns:1fr;}
-  .cs-block-inner{grid-template-columns:1fr; gap:16px;}
-  .njs-tags span{font-size:14px; padding:10px 14px;}
-  .celeb-panel{grid-template-columns:1fr;}
-  .media-grid{grid-template-columns:1fr 1fr;}
-}
-@media (max-width: 520px){
-  .receipt-grid{grid-template-columns:repeat(2,1fr);}
-  .industry-line{margin-left:0;}
-}
-
-/* ---------- work media grid (added: published work links) ---------- */
+/* ============================= MEDIA RAILS (WORK LINKS) ============================= */
+.media-block{margin-top:34px;}
+.media-block + .media-block{margin-top:28px;}
 .media-block-head{
   display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap;
   margin-bottom:16px; padding-bottom:10px; border-bottom:1px solid var(--line);
@@ -696,23 +728,105 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
 .lb-frame[data-p="youtube"] iframe{aspect-ratio:9/16; height:auto; background:#000;}
 .lb-out{font-family:var(--f-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--butter); display:inline-flex; gap:6px;}
 
-.reveal{}
+/* ============================= MIGRATED-CONTENT COMPONENTS ============================= */
+.hero-hand-note{font-family:var(--f-hand); font-size:19px; color:var(--tomato-dim); margin-top:6px;}
+.receipt-hand{font-family:var(--f-hand); font-size:16px; color:var(--tomato-dim); margin-bottom:2px; transform:rotate(-2deg);}
+.receipt-hand-sp{height:20px;}
+
+/* "Where I Play" — disciplines (from content source) */
+.play-grid{margin-top:52px; border-top:1px solid var(--line);}
+.play-row{
+  display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap;
+  padding:20px 0; border-bottom:1px solid var(--line);
+}
+.play-row h3{font-family:var(--f-display); font-weight:800; font-size:clamp(22px,3.2vw,32px);}
+.play-meta{font-family:var(--f-mono); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.75;}
+
+/* industry intro copy */
+.industry-copy{max-width:620px; font-size:16.5px; line-height:1.7; margin-top:18px;}
+.industry-lead{font-family:var(--f-display); font-weight:900; font-size:clamp(28px,4.6vw,54px); line-height:1.02; margin-top:6px;}
+.industry-lead .it{font-style:italic; font-weight:500; color:var(--tomato);}
+
+/* process flow */
+.flow{margin-top:52px; display:flex; flex-direction:column; gap:0;}
+.flow-step{
+  display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;
+  padding:18px 0; border-top:1px solid var(--line);
+}
+.flow-step:last-of-type{border-bottom:1px solid var(--line);}
+.flow-n{font-family:var(--f-mono); font-size:12px; letter-spacing:0.06em; opacity:0.7; min-width:34px;}
+.fs-word{font-family:var(--f-display); font-weight:800; font-size:clamp(21px,3vw,32px);}
+.fs-note{font-family:var(--f-hand); font-size:19px; color:var(--tomato-dim);}
+
+/* case-study index + cross-links */
+.case-index{display:flex; flex-wrap:wrap; gap:10px 20px; margin-top:26px;
+  font-family:var(--f-mono); font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;}
+.case-index a{opacity:0.8; border-bottom:1.5px solid currentColor; padding-bottom:2px;}
+.case-index a:hover{color:var(--tomato-dim); opacity:1;}
+.cs-funnel{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:26px;
+  font-family:var(--f-mono); font-size:13px; letter-spacing:0.08em; text-transform:uppercase;}
+.cs-funnel span{border:1px solid var(--line-light-strong); padding:10px 16px;}
+.cs-funnel .sep{border:none; color:var(--butter); padding:0;}
+.cs-tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;}
+.cs-tags span{font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
+  border:1px solid var(--line-light-strong); padding:7px 12px; opacity:0.9;}
+.cs-fields{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:26px 40px; margin-top:6px;}
+.cs-field .f-label{font-family:var(--f-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--butter);}
+.cs-field .f-body{margin-top:8px; font-size:15.5px; line-height:1.65; opacity:0.92;}
+.pending-note{
+  display:inline-flex; align-items:center; gap:8px; margin-top:10px;
+  font-family:var(--f-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--butter); border:1px dashed var(--butter); padding:7px 11px;
+}
+@media (max-width:860px){ .cs-fields{grid-template-columns:1fr;} }
+
+/* ============================= SCROLL REVEAL ============================= */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in-view{opacity:1; transform:translateY(0);}
+
+/* ============================= RESPONSIVE ============================= */
+@media (max-width: 860px){
+  .nav-links{display:none;}
+  .nav-burger{display:flex;}
+  .brand-feature{grid-template-columns:1fr;}
+  .hosp-split{gap:44px;}
+  .about-inner{grid-template-columns:1fr;}
+  .cs-block-inner{grid-template-columns:1fr; gap:16px;}
+  .njs-tags span{font-size:14px; padding:10px 14px;}
+  .celeb-panel{grid-template-columns:1fr;}
+  .media-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width: 520px){
+  .receipt-grid{grid-template-columns:repeat(2,1fr);}
+  .industry-line{margin-left:0;}
+}
+
+/* premium beauty work rails sit in the same columns as their brand cards */
+.premium-work-row{margin-top:8px; display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:18px; align-items:start;}
+.premium-work-row > .media-block{margin-top:0 !important; min-width:0;}
 
 /* ---------- overflow containment ---------- */
-/* Grid and flex children size to their widest child unless min-width is reset,
-   so the work grids pushed the hospitality tracks ~327px past the viewport. */
+/* Grid and flex children default to min-width:auto and size to their widest
+   child, so the work grids pushed the hospitality tracks ~327px past the
+   viewport at 1440. Reset it on every container that holds a work grid. */
 .hosp-split > *, .brand-feature > *, .celeb-panel > *, .industry-body > *,
-.brand-row > *, .media-block, .media-grid, .cs-block-inner > *{min-width:0;}
+.brand-row > *, .media-block, .media-grid, .cs-block-inner > *,
+.cs-content > *, .premium-work-row > *{min-width:0;}
 .media-grid{max-width:100%;}
 .nav-inner{max-width:100%; gap:12px;}
 .nav-logo{white-space:nowrap;}
 </style>
-<noscript><style>.reveal{opacity:1 !important; transform:none !important;}</style></noscript>
+<noscript><style>
+/* The reveal animation starts at opacity:0 and is switched on by script. With
+   JavaScript disabled nothing ever adds .in-view, so every revealed block —
+   the whole page body — stayed invisible. Show it all, unanimated. */
+.reveal{opacity:1 !important; transform:none !important;}
+</style></noscript>
 </head>
 <body>
 
 <!-- ============================= NAV ============================= -->
-<nav class="site-nav">
+<nav class="site-nav" aria-label="Primary">
   <div class="nav-inner">
     <a href="#top" class="nav-logo">PRITI TIWARI<sup>®</sup></a>
     <ul class="nav-links">
@@ -737,6 +851,7 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
   <div class="mm-foot">tpriti009@gmail.com — Bengaluru</div>
 </div>
 
+<main>
 <!-- ============================= HERO ============================= -->
 <header class="hero" id="top">
   <div class="hero-grain"></div>
@@ -754,8 +869,9 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
 
     <div class="hero-sub-row">
       <div>
-        <div class="hero-role">Marketing &amp; Brand Strategist</div>
+        <div class="hero-role">Marketing strategist. Brand builder. Professional overthinker of good ideas.</div>
         <div class="hero-cats">F&amp;B / Hospitality / Beauty / Fashion / Lifestyle / Culture</div>
+        <div class="hero-hand-note hand">and yes, I obsess over the details.</div>
       </div>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <a href="#industries" class="btn">See the work ↗</a>
@@ -794,18 +910,18 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
     </div>
     <div class="receipt-strip perf-top perf-bottom reveal">
       <div class="receipt-grid">
-        <div class="receipt-cell"><div class="receipt-num">₹1.5Cr</div><div class="receipt-label">Avg. monthly business driven</div></div>
-        <div class="receipt-cell"><div class="receipt-num">₹10L</div><div class="receipt-label">Monthly marketing budget owned</div></div>
-        <div class="receipt-cell"><div class="receipt-num">5,000+</div><div class="receipt-label">Monthly leads generated</div></div>
-        <div class="receipt-cell"><div class="receipt-num">4,000+</div><div class="receipt-label">Monthly leads, Sila Leisure</div></div>
-        <div class="receipt-cell"><div class="receipt-num">3X+</div><div class="receipt-label">ROI, multiple brands</div></div>
-        <div class="receipt-cell"><div class="receipt-num">1M+</div><div class="receipt-label">YouTube views — Chaipoint × Maggi</div></div>
-        <div class="receipt-cell"><div class="receipt-num">10K+</div><div class="receipt-label">Instagram likes — Chaipoint × Maggi</div></div>
-        <div class="receipt-cell"><div class="receipt-num">50+</div><div class="receipt-label">Influencers managed / brand / month</div></div>
+        <div class="receipt-cell"><div class="receipt-hand hand">not bad.</div><div class="receipt-num">₹1.5Cr</div><div class="receipt-label">average monthly business generated</div></div>
+        <div class="receipt-cell"><div class="receipt-hand-sp"></div><div class="receipt-num">5,000+</div><div class="receipt-label">monthly leads driven</div></div>
+        <div class="receipt-cell"><div class="receipt-hand hand">yes, really.</div><div class="receipt-num">₹10L</div><div class="receipt-label">monthly marketing budget managed</div></div>
+        <div class="receipt-cell"><div class="receipt-hand-sp"></div><div class="receipt-num">3X+</div><div class="receipt-label">return on ad spend</div></div>
+        <div class="receipt-cell"><div class="receipt-hand hand">numbers matter.</div><div class="receipt-num">4,000+</div><div class="receipt-label">monthly leads, second channel</div></div>
+        <div class="receipt-cell"><div class="receipt-hand-sp"></div><div class="receipt-num">1M+</div><div class="receipt-label">YouTube views on a single campaign</div></div>
+        <div class="receipt-cell"><div class="receipt-hand-sp"></div><div class="receipt-num">10K+</div><div class="receipt-label">Instagram likes — Chaipoint × Maggi</div></div>
+        <div class="receipt-cell"><div class="receipt-hand-sp"></div><div class="receipt-num">50+</div><div class="receipt-label">Influencers managed / brand / month</div></div>
       </div>
     </div>
     <div class="receipts-foot">
-      <span>no. 001 — verified against source resume</span>
+      <span>no. 001 — figures as supplied by Priti Tiwari</span>
       <span>printed Bengaluru, IN</span>
     </div>
   </div>
@@ -817,7 +933,7 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
     <span class="eyebrow reveal">Where I've Played</span>
     <h2 class="display reveal" style="margin-top:14px;">SIX WORLDS.<br>ONE MARKETING BRAIN.</h2>
     <p class="kicker reveal">Different categories. Different consumers. Same obsession: finding the idea.</p>
-    <nav class="industries-index reveal">
+    <nav class="industries-index reveal" aria-label="Industries">
       <a href="#ind-fnb">01 — F&amp;B</a>
       <a href="#ind-hospitality">02 — Hospitality</a>
       <a href="#ind-beauty">03 — Beauty &amp; Personal Care</a>
@@ -825,6 +941,23 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
       <a href="#ind-lifestyle">05 — Lifestyle &amp; Consumer</a>
       <a href="#ind-culture">06 — Entertainment &amp; Culture</a>
     </nav>
+
+    <div class="play-grid reveal">
+      <div class="play-row"><h3>F&amp;B</h3><span class="play-meta">Category-led marketing</span></div>
+      <div class="play-row"><h3>Hospitality</h3><span class="play-meta">Experience &amp; occupancy</span></div>
+      <div class="play-row"><h3>Brand</h3><span class="play-meta">Positioning &amp; identity</span></div>
+      <div class="play-row"><h3>Content</h3><span class="play-meta">Culture &amp; creators</span></div>
+      <div class="play-row"><h3>Performance</h3><span class="play-meta">Funnels &amp; ROI</span></div>
+      <div class="play-row"><h3>Culture</h3><span class="play-meta">Internet-native storytelling</span></div>
+    </div>
+
+    <div class="case-index reveal">
+      <span style="opacity:.7;">Case studies:</span>
+      <a href="#case-01">01 — Selling the escape</a>
+      <a href="#case-02">02 — When two brands meet for tea</a>
+      <a href="#case-03">03 — Serious about samosas</a>
+      <a href="#case-04">04 — Good brands are like good donuts</a>
+    </div>
   </div>
 </section>
 
@@ -836,6 +969,9 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
     <span class="industry-line hand">chai, samosas &amp; the odd doughnut — my strongest category.</span>
   </div>
   <div class="industry-body">
+    <h4 class="industry-lead reveal">I like brands <span class="it">people</span> can taste.</h4>
+    <p class="industry-copy reveal">I've worked across restaurants, cafés, QSRs, hospitality and lifestyle brands — categories where the experience is as important as the product.</p>
+
     <div class="brand-feature reveal">
       <div class="bf-media">Hero media — Chaipoint × Maggi campaign visuals go here</div>
       <div>
@@ -850,7 +986,7 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
           <span>Content calendars</span><span>Platform strategy</span><span>Brand collaboration</span><span>Team of 5</span><span>On-ground shoots</span>
         </div>
         <div class="bf-links">
-          <a href="#work" class="btn">View full case study ↗</a>
+          <a href="#case-02" class="btn">View full case study ↗</a>
         </div>
       </div>
     </div>
@@ -859,14 +995,14 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
       <div class="brand-card">
         <div class="bc-name display">Samosa Party</div>
         <div class="bc-role">Social Media Marketing</div>
-        <p class="bc-note">Part of the F&amp;B roster managed during my time at Chatterbox Communications — ORM, performance and influencer marketing.</p>
-        <div class="bc-status"><span class="coming-next">Case study content coming next</span></div>
+        <p class="bc-note">Take a beloved, everyday snack and give it a brand voice that feels as good as the product tastes.</p>
+        <div class="bc-status"><a href="#case-03" class="link-arrow">Case study 03 ↗</a></div>
       </div>
       <div class="brand-card">
         <div class="bc-name display">Krispy Kreme</div>
-        <div class="bc-role">F&amp;B / Consumer</div>
-        <p class="bc-note">Additional F&amp;B category work.</p>
-        <div class="bc-status"><span class="coming-next">[Add project details]</span></div>
+        <div class="bc-role">QSR — Content</div>
+        <p class="bc-note">Bright, energetic, repeatable visual language built for a brand that people already smile at.</p>
+        <div class="bc-status"><a href="#case-04" class="link-arrow">Case study 04 ↗</a></div>
       </div>
     </div>
   </div>
@@ -895,19 +1031,18 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
             <div class="bf-title display">The Cape Goa</div>
             <div class="bf-why-label">Project status</div>
             <p class="bf-why">A dedicated restaurant marketing project area, ready for campaigns, social, performance, content, photography, video and results as they're added.</p>
-            <div class="upload-grid">
+<div class="upload-grid">
               <div class="upload-slot">Campaigns</div>
               <div class="upload-slot">Social</div>
               <div class="upload-slot">Performance</div>
               <div class="upload-slot">Content</div>
               <div class="upload-slot">Photography</div>
               <div class="upload-slot">Video</div>
-            </div>
             <div class="bf-links"><span class="coming-next">Case study content coming next</span></div>
           </div>
         </div>
-        <div class="media-block reveal" data-media="cape" data-label="The Cape Goa — Published Work" style="margin-top:26px;"><div class="media-block-head"><span class="media-block-title">The Cape Goa — Published Work</span><span class="media-block-count">7 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="cape-01" href="https://www.instagram.com/reel/DZukipWvNt6/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DZukipWvNt6.jpg" alt="Ocean views, sunset hues, great food, and a little bit of Goa magic. 🌴🤍" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Ocean views, sunset hues, great food, and a little bit of Goa magic. 🌴🤍</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-02" href="https://www.instagram.com/reel/DZzsaQ2JJYs/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DZzsaQ2JJYs.jpg" alt="Sometimes it’s not only the food or the drinks — just a corner that becomes your…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Sometimes it’s not only the food or the drinks — just a corner that becomes your…</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-03" href="https://www.instagram.com/reel/DaktZxevXp5/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DaktZxevXp5.jpg" alt="👀 It's almost time. That's all we'll say." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">👀 It's almost time. That's all we'll say.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-04" href="https://www.instagram.com/reel/DbDp6LWvyKv/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DbDp6LWvyKv.jpg" alt="Good food, great company, and a table waiting for you. Let's brunch together. 🥂✨" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Good food, great company, and a table waiting for you. Let's brunch together. 🥂✨</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-05" href="https://www.instagram.com/reel/Dbssqw4IH3x/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-Dbssqw4IH3x.jpg" alt="One bite in, and the happy dance begins. 💃✨" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">One bite in, and the happy dance begins. 💃✨</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-06" href="https://www.instagram.com/reel/DcI2Q_aAcUB/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DcI2Q_aAcUB.jpg" alt="A private jacuzzi, the sea right outside, and a stay designed for doing absolutely…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">A private jacuzzi, the sea right outside, and a stay designed for doing absolutely…</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-07" href="https://www.instagram.com/reel/DcgMwuLom1T/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DcgMwuLom1T.jpg" alt="Wake up to a view that deserves your time. 🌊✨" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Wake up to a view that deserves your time. 🌊✨</div><span class="m-open">Play ↗</span></div></a></div></div>
-
+        <div class="bf-links" style="margin-top:22px;"><a href="#case-01" class="link-arrow">Read the case study — Selling the escape ↗</a></div>
+        <div class="media-block reveal" data-media="cape" data-label="The Cape Goa — Published Work" style="margin-top:28px;"><div class="media-block-head"><span class="media-block-title">The Cape Goa — Published Work</span><span class="media-block-count">7 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="cape-01" href="https://www.instagram.com/reel/DZukipWvNt6/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DZukipWvNt6.jpg" alt="Ocean views, sunset hues, great food, and a little bit of Goa magic. 🌴🤍" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Ocean views, sunset hues, great food, and a little bit of Goa magic. 🌴🤍</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-02" href="https://www.instagram.com/reel/DZzsaQ2JJYs/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DZzsaQ2JJYs.jpg" alt="Sometimes it’s not only the food or the drinks — just a corner that becomes your…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Sometimes it’s not only the food or the drinks — just a corner that becomes your…</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-03" href="https://www.instagram.com/reel/DaktZxevXp5/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DaktZxevXp5.jpg" alt="👀 It's almost time. That's all we'll say." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">👀 It's almost time. That's all we'll say.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-04" href="https://www.instagram.com/reel/DbDp6LWvyKv/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DbDp6LWvyKv.jpg" alt="Good food, great company, and a table waiting for you. Let's brunch together. 🥂✨" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Good food, great company, and a table waiting for you. Let's brunch together. 🥂✨</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-05" href="https://www.instagram.com/reel/Dbssqw4IH3x/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-Dbssqw4IH3x.jpg" alt="One bite in, and the happy dance begins. 💃✨" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">One bite in, and the happy dance begins. 💃✨</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-06" href="https://www.instagram.com/reel/DcI2Q_aAcUB/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DcI2Q_aAcUB.jpg" alt="A private jacuzzi, the sea right outside, and a stay designed for doing absolutely…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">A private jacuzzi, the sea right outside, and a stay designed for doing absolutely…</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cape-07" href="https://www.instagram.com/reel/DcgMwuLom1T/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DcgMwuLom1T.jpg" alt="Wake up to a view that deserves your time. 🌊✨" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Wake up to a view that deserves your time. 🌊✨</div><span class="m-open">Play ↗</span></div></a></div></div>
       </div>
 
       <!-- B. Properties -->
@@ -929,8 +1064,8 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
             <div class="bf-links"><span class="coming-next">Full case study coming next</span></div>
           </div>
         </div>
-        <div class="media-block reveal" data-media="sila" data-label="Sila Leisure — Published Work" style="margin-top:26px;"><div class="media-block-head"><span class="media-block-title">Sila Leisure — Published Work</span><span class="media-block-count">9 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="sila-01" href="https://www.instagram.com/reel/DVa9lAbEcFF/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DVa9lAbEcFF.jpg" alt="City life takes up your time." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">City life takes up your time.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-02" href="https://www.instagram.com/reel/DVdr7odkeuu/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DVdr7odkeuu.jpg" alt="From meetings… to traffic… to crowded metros." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">From meetings… to traffic… to crowded metros.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-03" href="https://www.instagram.com/reel/DVqe6a5DPYc/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DVqe6a5DPYc.jpg" alt="“The best reply to work stress? Still a dream! I Guess.”😅" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">“The best reply to work stress? Still a dream! I Guess.”😅</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-04" href="https://www.instagram.com/reel/DVvvn2zEV5K/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DVvvn2zEV5K.jpg" alt="Toxic at city, Green Flag at SILA." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Toxic at city, Green Flag at SILA.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-05" href="https://www.instagram.com/reel/DWjLvxpRfXb/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DWjLvxpRfXb.jpg" alt="Salaam Rocky Bhai😂" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Salaam Rocky Bhai😂</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-06" href="https://www.instagram.com/reel/DYpLt9jPTtV/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DYpLt9jPTtV.jpg" alt="This feels like therapy🥹" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">This feels like therapy🥹</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-07" href="https://www.instagram.com/reel/DYw3mV9PkiL/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DYw3mV9PkiL.jpg" alt="Just us🤍" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Just us🤍</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-08" href="https://www.instagram.com/reel/DZXdiv6A4KQ/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DZXdiv6A4KQ.jpg" alt="You have to experience it to know what the &quot;BEST&quot; feels like🤍" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">You have to experience it to know what the &quot;BEST&quot; feels like🤍</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-09" href="https://www.instagram.com/reel/DaF0i2QhYjK/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DaF0i2QhYjK.jpg" alt="Tucked away in Karnataka's untouched hills, where every view feels private and…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Tucked away in Karnataka's untouched hills, where every view feels private and…</div><span class="m-open">Play ↗</span></div></a></div></div>
-
+        <div class="bf-links" style="margin-top:22px;"><a href="#case-01" class="link-arrow">Read the case study — Selling the escape ↗</a></div>
+        <div class="media-block reveal" data-media="sila" data-label="Sila Leisure — Published Work" style="margin-top:28px;"><div class="media-block-head"><span class="media-block-title">Sila Leisure — Published Work</span><span class="media-block-count">9 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="sila-01" href="https://www.instagram.com/reel/DVa9lAbEcFF/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DVa9lAbEcFF.jpg" alt="City life takes up your time." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">City life takes up your time.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-02" href="https://www.instagram.com/reel/DVdr7odkeuu/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DVdr7odkeuu.jpg" alt="From meetings… to traffic… to crowded metros." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">From meetings… to traffic… to crowded metros.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-03" href="https://www.instagram.com/reel/DVqe6a5DPYc/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DVqe6a5DPYc.jpg" alt="“The best reply to work stress? Still a dream! I Guess.”😅" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">“The best reply to work stress? Still a dream! I Guess.”😅</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-04" href="https://www.instagram.com/reel/DVvvn2zEV5K/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DVvvn2zEV5K.jpg" alt="Toxic at city, Green Flag at SILA." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Toxic at city, Green Flag at SILA.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-05" href="https://www.instagram.com/reel/DWjLvxpRfXb/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DWjLvxpRfXb.jpg" alt="Salaam Rocky Bhai😂" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Salaam Rocky Bhai😂</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-06" href="https://www.instagram.com/reel/DYpLt9jPTtV/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DYpLt9jPTtV.jpg" alt="This feels like therapy🥹" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">This feels like therapy🥹</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-07" href="https://www.instagram.com/reel/DYw3mV9PkiL/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DYw3mV9PkiL.jpg" alt="Just us🤍" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Just us🤍</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-08" href="https://www.instagram.com/reel/DZXdiv6A4KQ/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DZXdiv6A4KQ.jpg" alt="You have to experience it to know what the &quot;BEST&quot; feels like🤍" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">You have to experience it to know what the &quot;BEST&quot; feels like🤍</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="sila-09" href="https://www.instagram.com/reel/DaF0i2QhYjK/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DaF0i2QhYjK.jpg" alt="Tucked away in Karnataka's untouched hills, where every view feels private and…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Tucked away in Karnataka's untouched hills, where every view feels private and…</div><span class="m-open">Play ↗</span></div></a></div></div>
       </div>
 
     </div>
@@ -956,8 +1091,8 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
         <div class="bf-links"><span class="coming-next">Case study content coming next</span></div>
       </div>
     </div>
-        <div class="media-block reveal" data-media="beauty" data-brand="Bella Vita Organic" data-label="Bella Vita Organic — Published Work" style="margin-top:26px;"><div class="media-block-head"><span class="media-block-title">Bella Vita Organic — Published Work</span><span class="media-block-count">1 link</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="bellavita-01" href="https://www.instagram.com/reel/CqftBD_jhPH/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-CqftBD_jhPH.jpg" alt="Prepare yourself for MORE this season!" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Prepare yourself for MORE this season!</div><span class="m-open">Play ↗</span></div></a></div></div>
 
+    <div class="media-block reveal" data-media="beauty" data-brand="Bella Vita Organic" data-label="Bella Vita Organic — Published Work" style="margin-top:24px;"><div class="media-block-head"><span class="media-block-title">Bella Vita Organic — Published Work</span><span class="media-block-count">1 link</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="bellavita-01" href="https://www.instagram.com/reel/CqftBD_jhPH/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-CqftBD_jhPH.jpg" alt="Prepare yourself for MORE this season!" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Prepare yourself for MORE this season!</div><span class="m-open">Play ↗</span></div></a></div></div>
 
     <div class="brand-row reveal">
       <div class="brand-card">
@@ -967,8 +1102,8 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
         <div class="bc-status"><span class="coming-next">Case study content coming next</span></div>
       </div>
     </div>
-        <div class="media-block reveal" data-media="beauty" data-brand="Vi-John" data-label="Vi-John — Published Work" style="margin-top:26px;"><div class="media-block-head"><span class="media-block-title">Vi-John — Published Work</span><span class="media-block-count">1 link</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="vijohn-01" href="https://www.instagram.com/reel/CqzlzneoSPE/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-CqzlzneoSPE.jpg" alt="Here’s what went down during the 45 days of rituals, snaans, and grooming!" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Here’s what went down during the 45 days of rituals, snaans, and grooming!</div><span class="m-open">Play ↗</span></div></a></div></div>
 
+    <div class="media-block reveal" data-media="beauty" data-brand="Vi-John" data-label="Vi-John — Published Work" style="margin-top:24px;"><div class="media-block-head"><span class="media-block-title">Vi-John — Published Work</span><span class="media-block-count">1 link</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="vijohn-01" href="https://www.instagram.com/reel/CqzlzneoSPE/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-CqzlzneoSPE.jpg" alt="Here’s what went down during the 45 days of rituals, snaans, and grooming!" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Here’s what went down during the 45 days of rituals, snaans, and grooming!</div><span class="m-open">Play ↗</span></div></a></div></div>
 
     <div class="other-brands reveal" style="margin-top:48px; padding-top:32px; border-top:1px dashed var(--line);">
       <div class="ob-label">International / Premium Beauty Experience</div>
@@ -985,10 +1120,24 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
           <p class="bc-note">Additional premium beauty portfolio work.</p>
           <div class="bc-status"><span class="coming-next">[Add project details]</span></div>
         </div>
+        <div class="brand-card">
+          <div class="bc-name display">Dermalogica India</div>
+          <div class="bc-role">Premium Skincare</div>
+          <p class="bc-note">Premium skincare portfolio — brand social handle managed as part of the premium beauty roster.</p>
+          <div class="bc-status"><span class="coming-next">[Add role description]</span></div>
+        </div>
       </div>
-        <div class="media-block reveal" data-media="beauty" data-brands="Olaplex India|Kevin Murphy India|Dermalogica India" data-label="Premium Beauty — Published Work" style="margin-top:26px;" data-showbrand="1"><div class="media-block-head"><span class="media-block-title">Premium Beauty — Published Work</span><span class="media-block-count">3 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="olaplex-01" href="https://www.instagram.com/p/DQjTwYdlcFy/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DQjTwYdlcFy.jpg" alt="OLAPLEX N°.7 Bonding Oil™ is a favorite for a reason and we have the receipts to…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · post</div><div class="m-title">OLAPLEX N°.7 Bonding Oil™ is a favorite for a reason and we have the receipts to…</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" href="https://www.instagram.com/dermalogicain" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-dermalogicain.jpg" alt="Dermalogica India — Instagram profile" loading="lazy" decoding="async" width="640" height="800"></div><div class="m-foot"><div class="m-kind">Instagram · profile</div><div class="m-title">Dermalogica India</div><span class="m-open">View profile ↗</span></div></a><a class="m-card" data-ratio="9/16" href="https://www.instagram.com/kevin.murphy_india" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-kevin.murphy_india.jpg" alt="Kevin Murphy India — Instagram profile" loading="lazy" decoding="async" width="640" height="800"></div><div class="m-foot"><div class="m-kind">Instagram · profile</div><div class="m-title">Kevin Murphy India</div><span class="m-open">View profile ↗</span></div></a></div></div>
-
     </div>
+
+    
+      <div class="premium-work-row">
+        <div class="media-block reveal" data-media="beauty" data-brand="Kevin Murphy India" data-label="Kevin Murphy India — Published Work" style="margin-top:24px;"><div class="media-block-head"><span class="media-block-title">Kevin Murphy India — Published Work</span><span class="media-block-count">1 link</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" href="https://www.instagram.com/kevin.murphy_india" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-kevin.murphy_india.jpg" alt="Kevin Murphy India — Instagram profile" loading="lazy" decoding="async" width="640" height="800"></div><div class="m-foot"><div class="m-kind">Instagram · profile</div><span class="m-open">View profile ↗</span></div></a></div></div>
+        <div class="media-block reveal" data-media="beauty" data-brand="Olaplex India" data-label="Olaplex India — Published Work" style="margin-top:24px;"><div class="media-block-head"><span class="media-block-title">Olaplex India — Published Work</span><span class="media-block-count">1 link</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="olaplex-01" href="https://www.instagram.com/p/DQjTwYdlcFy/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DQjTwYdlcFy.jpg" alt="OLAPLEX N°.7 Bonding Oil™ is a favorite for a reason and we have the receipts to…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · post</div><div class="m-title">OLAPLEX N°.7 Bonding Oil™ is a favorite for a reason and we have the receipts to…</div><span class="m-open">Play ↗</span></div></a></div></div>
+        <div class="media-block reveal" data-media="beauty" data-brand="Dermalogica India" data-label="Dermalogica India — Published Work" style="margin-top:24px;"><div class="media-block-head"><span class="media-block-title">Dermalogica India — Published Work</span><span class="media-block-count">1 link</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" href="https://www.instagram.com/dermalogicain" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-dermalogicain.jpg" alt="Dermalogica India — Instagram profile" loading="lazy" decoding="async" width="640" height="800"></div><div class="m-foot"><div class="m-kind">Instagram · profile</div><span class="m-open">View profile ↗</span></div></a></div></div>
+      </div>
+
+      
+      
   </div>
 </section>
 
@@ -1001,18 +1150,20 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
   </div>
   <div class="industry-body">
     <div class="brand-feature reveal">
-      <div class="bf-media">Hero media — Campus Sutra campaign visuals go here</div>
+      <div class="bf-media">Hero media — Cahoot campaign visuals go here</div>
       <div>
         <div class="bf-eyebrow"><span class="ticket-tag">Fashion — Hero Brand</span><span class="stamp" style="border-color:var(--butter); color:var(--butter);">3X ROI</span></div>
-        <div class="bf-title display">Campus Sutra</div>
-        <div class="bf-why-label" style="opacity:0.6;">What I did</div>
+        <div class="bf-title display">Cahoot</div>
+        <div class="bf-why-label" style="opacity:0.6;">Previously Campus Sutra</div>
+        <div class="bf-why-label" style="opacity:0.6; margin-top:18px;">What I did</div>
         <p class="bf-why" style="opacity:0.85;">Social media, influencer marketing, performance marketing, content marketing and community building — including an ambassadors' program — achieving 3X ROI through influencer marketing.</p>
-        <div class="bf-did"><span>Influencer Marketing</span><span>Performance Marketing</span><span>Community Building</span><span>Ambassador Program</span></div>
-        <div class="bf-links"><span class="coming-next">Case study content coming next</span></div>
+        <div class="bf-did"><span>Social Media</span><span>Influencer Marketing</span><span>Performance Marketing</span><span>Content Marketing</span><span>Community Building</span><span>Ambassador Program</span></div>
+        <div class="bf-why-label" style="opacity:0.6; margin-top:18px;">Result</div>
+        <p class="bf-why" style="opacity:0.85;">3X ROI through influencer marketing.</p>
       </div>
     </div>
-        <div class="media-block reveal" data-media="cahoot" data-label="Campus Sutra — Published Work" style="margin-top:26px;"><div class="media-block-head"><span class="media-block-title">Campus Sutra — Published Work</span><span class="media-block-count">6 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="cahoot-01" href="https://www.instagram.com/reel/CysVtHPytzf/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-CysVtHPytzf.jpg" alt="Issa Vibe 🤌🏻👀" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Issa Vibe 🤌🏻👀</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-02" href="https://www.instagram.com/reel/Cy0DJ13y7ov/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-Cy0DJ13y7ov.jpg" alt="Cuff links or Cat Walks" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Cuff links or Cat Walks</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-03" href="https://www.instagram.com/reel/C1PFhjnxPg6/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C1PFhjnxPg6.jpg" alt="GRWM ft. @campussutra" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">GRWM ft. @campussutra</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-04" href="https://www.instagram.com/reel/C1mTFzUP-bd/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C1mTFzUP-bd.jpg" alt="THERE IS NOEASIER WAY TO GET DRESSED THAN WITH THESE AMAZING JACKETS AND TSHIRT ✨" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">THERE IS NOEASIER WAY TO GET DRESSED THAN WITH THESE AMAZING JACKETS AND TSHIRT ✨</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-05" href="https://www.instagram.com/reel/DC8cK-TTnUG/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DC8cK-TTnUG.jpg" alt="Spotted it yet? The Black Friday deals are disappearing FAST! 😱" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Spotted it yet? The Black Friday deals are disappearing FAST! 😱</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-06" href="https://www.instagram.com/reel/DJrO90izRj7/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DJrO90izRj7.jpg" alt="Your old shirts called. They’re officially unemployed." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Your old shirts called. They’re officially unemployed.</div><span class="m-open">Play ↗</span></div></a></div></div>
 
+    <div class="media-block reveal" data-media="cahoot" data-label="Cahoot — Published Work" ><div class="media-block-head"><span class="media-block-title">Cahoot — Published Work</span><span class="media-block-count">6 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="cahoot-01" href="https://www.instagram.com/reel/CysVtHPytzf/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-CysVtHPytzf.jpg" alt="Issa Vibe 🤌🏻👀" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Issa Vibe 🤌🏻👀</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-02" href="https://www.instagram.com/reel/Cy0DJ13y7ov/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-Cy0DJ13y7ov.jpg" alt="Cuff links or Cat Walks" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Cuff links or Cat Walks</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-03" href="https://www.instagram.com/reel/C1PFhjnxPg6/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C1PFhjnxPg6.jpg" alt="GRWM ft. @campussutra" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">GRWM ft. @campussutra</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-04" href="https://www.instagram.com/reel/C1mTFzUP-bd/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C1mTFzUP-bd.jpg" alt="THERE IS NOEASIER WAY TO GET DRESSED THAN WITH THESE AMAZING JACKETS AND TSHIRT ✨" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">THERE IS NOEASIER WAY TO GET DRESSED THAN WITH THESE AMAZING JACKETS AND TSHIRT ✨</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-05" href="https://www.instagram.com/reel/DC8cK-TTnUG/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DC8cK-TTnUG.jpg" alt="Spotted it yet? The Black Friday deals are disappearing FAST! 😱" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Spotted it yet? The Black Friday deals are disappearing FAST! 😱</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="cahoot-06" href="https://www.instagram.com/reel/DJrO90izRj7/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DJrO90izRj7.jpg" alt="Your old shirts called. They’re officially unemployed." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Your old shirts called. They’re officially unemployed.</div><span class="m-open">Play ↗</span></div></a></div></div>
 
     <div class="celeb-panel reveal">
       <div class="bf-media" style="height:100%;">Media area — celebrity shoot video, BTS &amp; campaign assets go here</div>
@@ -1029,8 +1180,8 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
         <div class="bf-links" style="margin-top:20px;"><span class="coming-next">Celebrity name &amp; results coming next</span></div>
       </div>
     </div>
-        <div class="media-block reveal" data-media="celeb" data-label="Celebrity Collab Shoot — Published Work" style="margin-top:26px;"><div class="media-block-head"><span class="media-block-title">Celebrity Collab Shoot — Published Work</span><span class="media-block-count">4 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="celeb-01" href="https://www.instagram.com/reel/C3P1A_JSCP4/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C3P1A_JSCP4.jpg" alt="InstaFab Plus / Sohi — Instagram reel" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="celeb-02" href="https://www.instagram.com/reel/C2uSo-ZqeDk/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C2uSo-ZqeDk.jpg" alt="InstaFab Plus / Sohi — Instagram reel" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="celeb-03" href="https://www.instagram.com/reel/C2hK0DcySnQ/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C2hK0DcySnQ.jpg" alt="InstaFab Plus / Sohi — Instagram reel" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="celeb-04" href="https://www.instagram.com/reel/C3h3VaVyQE5/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C3h3VaVyQE5.jpg" alt="InstaFab Plus / Sohi — Instagram reel" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><span class="m-open">Play ↗</span></div></a></div></div>
 
+    <div class="media-block reveal" data-media="celeb" data-label="Celebrity Collab Shoot — Published Work" ><div class="media-block-head"><span class="media-block-title">Celebrity Collab Shoot — Published Work</span><span class="media-block-count">4 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="celeb-01" href="https://www.instagram.com/reel/C3P1A_JSCP4/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C3P1A_JSCP4.jpg" alt="InstaFab Plus / Sohi — Instagram reel" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="celeb-02" href="https://www.instagram.com/reel/C2uSo-ZqeDk/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C2uSo-ZqeDk.jpg" alt="InstaFab Plus / Sohi — Instagram reel" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="celeb-03" href="https://www.instagram.com/reel/C2hK0DcySnQ/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C2hK0DcySnQ.jpg" alt="InstaFab Plus / Sohi — Instagram reel" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="celeb-04" href="https://www.instagram.com/reel/C3h3VaVyQE5/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C3h3VaVyQE5.jpg" alt="InstaFab Plus / Sohi — Instagram reel" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><span class="m-open">Play ↗</span></div></a></div></div>
   </div>
 </section>
 
@@ -1102,22 +1253,69 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
         <div class="bf-eyebrow"><span class="ticket-tag">Entertainment — Hero Profile</span></div>
         <div class="bf-title display">Rapture Entertainment</div>
         <div class="bf-why-label">What I did</div>
-        <p class="bf-why">As Celebrity Manager, supported Parthiv Gohil's events and live shows — running email marketing, influencer campaigns, client servicing and social media &amp; ad campaigns for the production house.</p>
-        <div class="bf-did"><span>Event Marketing</span><span>Email Marketing</span><span>Influencer Marketing</span><span>Client Servicing</span></div>
+        <p class="bf-why">As Celebrity Manager, supported the artist roster — including Parthiv Gohil and Pratibha Singh — across events and live shows, running email marketing, influencer campaigns, client servicing and social media &amp; ad campaigns for the production house.</p>
+        <div class="bf-did"><span>Event Marketing</span><span>Email Marketing</span><span>Influencer Marketing</span><span>Client Servicing</span><span>Artist Roster</span></div>
         <div class="bf-links"><span class="coming-next">Case study content coming next</span></div>
       </div>
     </div>
-        <div class="media-block reveal" data-media="rapture" data-label="Artist Roster" style="margin-top:26px;"><div class="media-block-head"><span class="media-block-title">Artist Roster</span><span class="media-block-count">2 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" href="https://www.instagram.com/parthivgohil9" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-parthivgohil9.jpg" alt="Rapture Entertainment — Instagram profile" loading="lazy" decoding="async" width="640" height="800"></div><div class="m-foot"><div class="m-kind">Instagram · profile</div><span class="m-open">View profile ↗</span></div></a><a class="m-card" data-ratio="9/16" href="https://www.instagram.com/iampratibhasingh" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-iampratibhasingh.jpg" alt="Rapture Entertainment — Instagram profile" loading="lazy" decoding="async" width="640" height="800"></div><div class="m-foot"><div class="m-kind">Instagram · profile</div><span class="m-open">View profile ↗</span></div></a></div></div>
 
+    <div class="media-block reveal" data-media="rapture" data-label="Artist Roster" data-wide="1" data-showbrand="1" ><div class="media-block-head"><span class="media-block-title">Artist Roster</span><span class="media-block-count">2 links</span></div><div class="media-grid wide"><a class="m-card" data-ratio="9/16" href="https://www.instagram.com/parthivgohil9" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-parthivgohil9.jpg" alt="Rapture Entertainment — Instagram profile" loading="lazy" decoding="async" width="640" height="800"></div><div class="m-foot"><div class="m-kind">Instagram · profile</div><div class="m-title">Rapture Entertainment</div><span class="m-open">View profile ↗</span></div></a><a class="m-card" data-ratio="9/16" href="https://www.instagram.com/iampratibhasingh" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-iampratibhasingh.jpg" alt="Rapture Entertainment — Instagram profile" loading="lazy" decoding="async" width="640" height="800"></div><div class="m-foot"><div class="m-kind">Instagram · profile</div><div class="m-title">Rapture Entertainment</div><span class="m-open">View profile ↗</span></div></a></div></div>
   </div>
 </section>
 
-<!-- ============================= CHAIPOINT × MAGGI CASE STUDY ============================= -->
-<section class="case-study" id="work">
+<!-- ============================= CASE 01 — SILA / CAPE ============================= -->
+<section class="case-study" id="case-01">
   <div class="cs-hero">
     <div class="cs-hero-inner">
-      <span class="cs-tag reveal">F&amp;B / Brand Collaboration / Content Strategy</span>
-      <h2 class="cs-title display reveal">CHAIPOINT<span class="x">×</span>MAGGI</h2>
+      <span class="cs-tag reveal">01 / Hospitality</span>
+      <h2 class="cs-title display reveal">SELLING THE<br>ESCAPE.</h2>
+      <p class="cs-subtitle reveal">Sila Leisure / The Cape Goa</p>
+      <div class="cs-meta reveal">
+        <span>Marketing Lead</span><span>09/2025 — present</span><span>Team of 7</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-block perf-top on-charcoal">
+    <div class="cs-block-inner reveal">
+      <span class="cs-label">The Work</span>
+      <div class="cs-content">
+        <div class="cs-fields">
+          <div class="cs-field"><div class="f-label">Brand</div><div class="f-body">Sila Leisure / The Cape Goa</div></div>
+          <div class="cs-field"><div class="f-label">Challenge</div><div class="f-body">Turn a beautiful property into a booked-out one — in a category where guests decide with their eyes long before they decide with their wallet.</div></div>
+          <div class="cs-field"><div class="f-label">Strategy</div><div class="f-body">Lead with the experience, not the amenities list. Build a content and performance engine that sells the feeling of being there.</div></div>
+          <div class="cs-field"><div class="f-label">Execution</div><div class="f-body">Brand-led content, influencer partnerships, SEO and a website built to convert lookers into bookers, backed by always-on performance marketing.</div></div>
+          <div class="cs-field"><div class="f-label">Channels</div><div class="f-body">Instagram, YouTube, Search, Web, Influencers</div></div>
+          <div class="cs-field"><div class="f-label">Results</div><div class="f-body">Consistent direct booking growth and a marketing engine that runs on ₹10L/month, producing 5,000+ monthly leads.</div></div>
+        </div>
+        <div class="cs-tags">
+          <span>Brand</span><span>Content</span><span>Performance</span><span>Influencers</span><span>SEO</span><span>Web</span>
+        </div>
+        <div class="cs-funnel">
+          <span>Attention</span><span class="sep">→</span><span>Interest</span><span class="sep">→</span><span>Lead</span><span class="sep">→</span><span>Booking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <div class="cs-block-inner reveal">
+      <span class="cs-label">Published Work</span>
+      <div class="cs-content">
+        <p>Published work for both brands sits with each brand in the Hospitality section — 9 reels for Sila Leisure, 7 for The Cape Goa.</p>
+        <div class="bf-links" style="margin-top:18px;"><a href="#ind-hospitality" class="link-arrow">See the published work ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CASE 02 — CHAIPOINT × MAGGI ============================= -->
+<section class="case-study" id="work">
+  <span id="case-02"></span>
+  <div class="cs-hero">
+    <div class="cs-hero-inner">
+      <span class="cs-tag reveal">02 / F&amp;B Collaboration</span>
+      <h2 class="cs-title display reveal">CHAIPOINT<wbr><span class="x">×</span>MAGGI</h2>
       <p class="cs-subtitle reveal">Decomplex the brief.</p>
       <div class="cs-meta reveal">
         <span>Chtrsocial — Social Media Manager</span>
@@ -1172,14 +1370,7 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
       <div class="cs-content">
         <div class="direction-line"><span>RELATABILITY</span><span class="beats">&gt;</span><span class="win">COMPLEXITY</span></div>
         <p>The content leaned all the way into that truth — chai and Maggi, cast as best friends, in the kind of everyday moment everyone already recognises.</p>
-        <div class="yt-embeds-row">
-          <div class="yt-embed">
-            <iframe src="https://www.youtube.com/embed/wyFjHreV-XE" title="Chaipoint × Maggi — YouTube Short" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="yt-embed">
-            <iframe src="https://www.youtube.com/embed/YbLVZ2QXLqo" title="Chaipoint × Maggi — YouTube Short" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
+        <div class="media-block" data-media="chaipoint" data-platform="youtube" data-label="The Films — YouTube Shorts" data-wide="1" ><div class="media-block-head"><span class="media-block-title">The Films — YouTube Shorts</span><span class="media-block-count">2 links</span></div><div class="media-grid wide"><a class="m-card" data-ratio="16/9" data-open="chai-yt-01" href="https://youtube.com/shorts/wyFjHreV-XE" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/yt-wyFjHreV-XE.jpg" alt="Our password is strong but the breakfast menu is stronger! Delicious, pocket-friendly options at ₹99." loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">YouTube · short</div><div class="m-title">Our password is strong but the breakfast menu is stronger! Delicious, pocket-friendly options at ₹99.</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="16/9" data-open="chai-yt-02" href="https://youtube.com/shorts/YbLVZ2QXLqo" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/yt-YbLVZ2QXLqo.jpg" alt="Desi Noodle Box made with Maggi® | Flavorful Indian Recipe" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">YouTube · short</div><div class="m-title">Desi Noodle Box made with Maggi® | Flavorful Indian Recipe</div><span class="m-open">Play ↗</span></div></a></div></div>
       </div>
     </div>
   </div>
@@ -1206,29 +1397,30 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
       <span class="cs-label">Execution</span>
       <div class="cs-content">
         <p>Campaign content, published on Instagram — view the posts and reels directly.</p>
-        <div class="ig-cards-row">
-          <div class="ig-card">
-            <div><div class="ig-kind">Instagram / Post</div></div>
-            <a class="ig-link" href="https://www.instagram.com/p/C8pF5KSo_Qe/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
-          </div>
-          <div class="ig-card">
-            <div><div class="ig-kind">Instagram / Reel</div></div>
-            <a class="ig-link" href="https://www.instagram.com/reel/C-DONCdIeb6/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
-          </div>
-          <div class="ig-card">
-            <div><div class="ig-kind">Instagram / Reel</div></div>
-            <a class="ig-link" href="https://www.instagram.com/reel/DAlaHxYPAw6/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
-          </div>
-          <div class="ig-card">
-            <div><div class="ig-kind">Instagram / Post</div></div>
-            <a class="ig-link" href="https://www.instagram.com/p/CogquhyPs0V/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
-          </div>
-        </div>
+        <div class="media-block" data-media="chaipoint" data-platform="instagram" data-label="Campaign Content — Instagram" ><div class="media-block-head"><span class="media-block-title">Campaign Content — Instagram</span><span class="media-block-count">4 links</span></div><div class="media-grid"><a class="m-card" data-ratio="9/16" data-open="chai-ig-01" href="https://www.instagram.com/p/C8pF5KSo_Qe/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C8pF5KSo_Qe.jpg" alt="Sometimes one cup of chai is all we need to feel okay ☕ Tell us how was your day…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · post</div><div class="m-title">Sometimes one cup of chai is all we need to feel okay ☕ Tell us how was your day…</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="chai-ig-02" href="https://www.instagram.com/reel/C-DONCdIeb6/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-C-DONCdIeb6.jpg" alt="How other people greet: 🫱🏻‍🫲🏻" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">How other people greet: 🫱🏻‍🫲🏻</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="chai-ig-03" href="https://www.instagram.com/reel/DAlaHxYPAw6/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-DAlaHxYPAw6.jpg" alt="Straight from Namma Bengaluru!" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · reel</div><div class="m-title">Straight from Namma Bengaluru!</div><span class="m-open">Play ↗</span></div></a><a class="m-card" data-ratio="9/16" data-open="chai-ig-04" href="https://www.instagram.com/p/CogquhyPs0V/" target="_blank" rel="noopener"><div class="m-shot"><img src="assets/thumbs/ig-CogquhyPs0V.jpg" alt="The taste of a samosa is forever. What's more, it's comfort food that always gives…" loading="lazy" decoding="async" width="640" height="800"><span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span></div><div class="m-foot"><div class="m-kind">Instagram · post</div><div class="m-title">The taste of a samosa is forever. What's more, it's comfort food that always gives…</div><span class="m-open">Play ↗</span></div></a></div></div>
         <div class="gallery-slots">
           <div class="gallery-slot">Campaign still 01<br>[Add image]</div>
           <div class="gallery-slot">Campaign still 02<br>[Add image]</div>
           <div class="gallery-slot">BTS<br>[Add image]</div>
           <div class="gallery-slot">Final asset<br>[Add image]</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-block">
+    <div class="cs-block-inner reveal">
+      <span class="cs-label">The Culture</span>
+      <div class="cs-content">
+        <p class="big">Made for the people already talking about food on the internet — not at them.</p>
+        <div class="moments-grid">
+          <div class="moment-chip">the brief said "collab." we heard "moment."</div>
+          <div class="moment-chip">creators &gt; ads</div>
+          <div class="moment-chip">culture, not content</div>
+          <div class="moment-chip">launch day chaos (the good kind)</div>
+          <div class="moment-chip">chai + maggi = 🔥</div>
+          <div class="moment-chip">this one was fun.</div>
         </div>
       </div>
     </div>
@@ -1251,10 +1443,75 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
   </div>
 </section>
 
+<!-- ============================= CASE 03 — SAMOSA PARTY ============================= -->
+<section class="case-study" id="case-03">
+  <div class="cs-hero">
+    <div class="cs-hero-inner">
+      <span class="cs-tag reveal">03 / F&amp;B</span>
+      <h2 class="cs-title display reveal">SERIOUS ABOUT SAMOSAS.<br>SERIOUS ABOUT<br>BRANDING TOO.</h2>
+      <p class="cs-subtitle reveal">Samosa Party</p>
+    </div>
+  </div>
+  <div class="cs-block perf-top on-charcoal">
+    <div class="cs-block-inner reveal">
+      <span class="cs-label">The Work</span>
+      <div class="cs-content">
+        <div class="cs-fields">
+          <div class="cs-field"><div class="f-label">Brand</div><div class="f-body">Samosa Party</div></div>
+          <div class="cs-field"><div class="f-label">Challenge</div><div class="f-body">Take a beloved, everyday snack and give it a brand voice that feels as good as the product tastes.</div></div>
+          <div class="cs-field"><div class="f-label">Strategy</div><div class="f-body">A warmer, more playful visual and content language — treating a familiar category with the seriousness of a modern F&amp;B brand.</div></div>
+          <div class="cs-field"><div class="f-label">Results</div><div class="f-body">Details to be added — full campaign metrics available on request.<br><span class="pending-note">Metrics not published</span></div></div>
+        </div>
+        <div class="cs-tags"><span>Brand Voice</span><span>Content</span><span>F&amp;B Marketing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CASE 04 — KRISPY KREME ============================= -->
+<section class="case-study" id="case-04">
+  <div class="cs-hero">
+    <div class="cs-hero-inner">
+      <span class="cs-tag reveal">04 / QSR</span>
+      <h2 class="cs-title display reveal">GOOD BRANDS<br>ARE LIKE GOOD DONUTS.</h2>
+      <p class="cs-subtitle reveal">Krispy Kreme</p>
+    </div>
+  </div>
+  <div class="cs-block perf-top on-charcoal">
+    <div class="cs-block-inner reveal">
+      <span class="cs-label">The Work</span>
+      <div class="cs-content">
+        <div class="cs-fields">
+          <div class="cs-field"><div class="f-label">Brand</div><div class="f-body">Krispy Kreme</div></div>
+          <div class="cs-field"><div class="f-label">Approach</div><div class="f-body">Bright, energetic, repeatable visual language built for a brand that people already smile at.</div></div>
+          <div class="cs-field"><div class="f-label">Results</div><div class="f-body">Details to be added — full campaign metrics available on request.<br><span class="pending-note">Metrics not published</span></div></div>
+        </div>
+        <div class="cs-tags"><span>Playful Visuals</span><span>Content</span><span>Launch</span><span>Community</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ============================= THINKING / CAREER EVOLUTION ============================= -->
 <section class="thinking" id="thinking">
   <div class="thinking-inner">
     <div class="thinking-head reveal">
+      <span class="eyebrow">How My Brain Works</span>
+      <h2 class="display" style="margin-top:14px;">NOT "SKILLS."<br>A PROCESS.</h2>
+    </div>
+
+    <div class="flow reveal">
+      <div class="flow-step"><span class="flow-n">01</span><span class="fs-word">Observe</span></div>
+      <div class="flow-step"><span class="flow-n">02</span><span class="fs-word">Find the tension</span> <span class="fs-note">"the brief is rarely the actual problem."</span></div>
+      <div class="flow-step"><span class="flow-n">03</span><span class="fs-word">Find the idea</span></div>
+      <div class="flow-step"><span class="flow-n">04</span><span class="fs-word">Make it beautiful</span></div>
+      <div class="flow-step"><span class="flow-n">05</span><span class="fs-word">Put it where people are</span></div>
+      <div class="flow-step"><span class="flow-n">06</span><span class="fs-word">Measure</span></div>
+      <div class="flow-step"><span class="flow-n">07</span><span class="fs-word">Make it better</span> <span class="fs-note">on repeat.</span></div>
+    </div>
+
+    <div class="thinking-head reveal" style="margin-top:80px;">
       <span class="eyebrow">Career Evolution</span>
       <h2 class="display" style="margin-top:14px;">FROM POSTING<br>TO STRATEGY.</h2>
     </div>
@@ -1289,9 +1546,18 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
       <button class="filter-btn" data-filter="fashion">Fashion</button>
       <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
       <button class="filter-btn" data-filter="other">Other</button>
+      <span class="filter-sep" aria-hidden="true"></span>
+      <button class="filter-btn" data-filter="cap:brand">Brand</button>
+      <button class="filter-btn" data-filter="cap:strategy">Strategy</button>
+      <button class="filter-btn" data-filter="cap:content">Content</button>
+      <button class="filter-btn" data-filter="cap:performance">Performance</button>
+      <button class="filter-btn" data-filter="cap:influencer">Influencer</button>
+      <button class="filter-btn" data-filter="cap:campaigns">Campaigns</button>
+      <button class="filter-btn" data-filter="cap:social">Social</button>
+      <button class="filter-btn" data-filter="cap:digital">Digital</button>
     </div>
 
-    <div class="archive-grid reveal" id="archiveGrid"><!-- populated by JS from BRANDS data --></div>
+    <div class="archive-grid reveal" id="archiveGrid"><div class="arc-item" data-cat="fnb" data-caps="brand campaigns"><div class="arc-name">Chaipoint</div><div class="arc-cat">fnb</div><div class="arc-hover"><div><div class="arc-role">F&amp;B — Brand &amp; Campaigns</div><div class="arc-note">Flagship F&amp;B case study — Chaipoint × Maggi.</div></div><a class="arc-link" href="https://www.instagram.com/p/C8pF5KSo_Qe/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="fnb" data-caps="brand content"><div class="arc-name">Samosa Party</div><div class="arc-cat">fnb</div><div class="arc-hover"><div><div class="arc-role">F&amp;B — Brand Voice</div><div class="arc-note">Case study 03 — brand voice for an everyday snack.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="fnb" data-caps="content"><div class="arc-name">Krispy Kreme</div><div class="arc-cat">fnb</div><div class="arc-hover"><div><div class="arc-role">QSR — Content</div><div class="arc-note">Case study 04 — playful, repeatable visual language.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="hospitality" data-caps="performance"><div class="arc-name">The Cape Goa</div><div class="arc-cat">hospitality</div><div class="arc-hover"><div><div class="arc-role">Hospitality — Growth</div><div class="arc-note">Case study 01 — selling the escape.</div></div><a class="arc-link" href="https://www.instagram.com/reel/DZukipWvNt6/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="hospitality" data-caps=""><div class="arc-name">Sila Leisure</div><div class="arc-cat">hospitality</div><div class="arc-hover"><div><div class="arc-role">Hospitality — Marketing Lead</div><div class="arc-note">Case study 01 — selling the escape.</div></div><a class="arc-link" href="https://www.instagram.com/reel/DVa9lAbEcFF/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps="brand performance"><div class="arc-name">Bella Vita Organic</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Consumer — Performance</div><div class="arc-note">Beauty hero brand, Chatterbox Communications.</div></div><a class="arc-link" href="https://www.instagram.com/reel/CqftBD_jhPH/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps="performance influencer social"><div class="arc-name">Vi-John</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Social / Performance / Influencer</div><div class="arc-note">Chatterbox Communications roster.</div></div><a class="arc-link" href="https://www.instagram.com/reel/CqzlzneoSPE/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps=""><div class="arc-name">Kevin Murphy India</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Premium Haircare</div><div class="arc-note">Premium beauty portfolio.</div></div><a class="arc-link" href="https://www.instagram.com/kevin.murphy_india" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps=""><div class="arc-name">Olaplex India</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Premium Haircare</div><div class="arc-note">Premium beauty portfolio.</div></div><a class="arc-link" href="https://www.instagram.com/p/DQjTwYdlcFy/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps=""><div class="arc-name">Dermalogica India</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Premium Skincare</div><div class="arc-note">Premium beauty portfolio.</div></div><a class="arc-link" href="https://www.instagram.com/dermalogicain" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="fashion" data-caps="performance influencer digital"><div class="arc-name">Cahoot (prev. Campus Sutra)</div><div class="arc-cat">fashion</div><div class="arc-hover"><div><div class="arc-role">Consumer — Digital</div><div class="arc-note">3X ROI through influencer marketing.</div></div><a class="arc-link" href="https://www.instagram.com/reel/CysVtHPytzf/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="fashion" data-caps="performance influencer digital"><div class="arc-name">InstaFab Plus</div><div class="arc-cat">fashion</div><div class="arc-hover"><div><div class="arc-role">Consumer — Digital</div><div class="arc-note">Scaled growth with a celebrity collaboration.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="fashion" data-caps="brand performance influencer"><div class="arc-name">Sohi</div><div class="arc-cat">fashion</div><div class="arc-hover"><div><div class="arc-role">Consumer — Brand</div><div class="arc-note">Celebrity-backed growth, alongside InstaFab Plus.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="content performance influencer"><div class="arc-name">Haute Sauce</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Consumer — Content</div><div class="arc-note">3X ROI through influencer marketing.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance influencer social"><div class="arc-name">Vybe Beauty Fridge</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">ORM / Performance / Influencer</div><div class="arc-note">Billionkart roster.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="social"><div class="arc-name">Pourdemistase</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social Media Marketing</div><div class="arc-note">Billionkart roster.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="social"><div class="arc-name">Pina Colada</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social Media Marketing</div><div class="arc-note">Billionkart roster.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Be Soulfull</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Detoxie Skincare</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Happier Skincare</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Planet Herbs Lifesciences</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Veda &amp; Grace</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="other" data-caps="influencer"><div class="arc-name">Rapture Entertainment</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Celebrity Manager</div><div class="arc-note">Supported Parthiv Gohil's events &amp; live shows.</div></div><a class="arc-link" href="https://www.instagram.com/parthivgohil9" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="other" data-caps="social"><div class="arc-name">Bajaj Finance</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Social Media Marketing</div><div class="arc-note">Handled at Chtrsocial.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="other" data-caps=""><div class="arc-name">Chetan Rathod Group</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Ad Film</div><div class="arc-note">Created an ad film, Chtrsocial.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="other" data-caps="strategy social"><div class="arc-name">St. Willibrord International School</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Social Strategy</div><div class="arc-note">Early career, Aprowress.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="other" data-caps="strategy social"><div class="arc-name">Willy Kids Pre-school</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Social Strategy</div><div class="arc-note">Early career, Aprowress.</div></div><span class="arc-link">Details not published</span></div></div><div class="arc-item" data-cat="other" data-caps="strategy influencer social"><div class="arc-name">Parents As Teachers (PAT)</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Social Strategy</div><div class="arc-note">Education influencer, Aprowress.</div></div><span class="arc-link">Details not published</span></div></div></div><div class="arc-cat">fnb</div><div class="arc-hover"><div><div class="arc-role">F&amp;B — Brand &amp; Campaigns</div><div class="arc-note">Flagship F&amp;B case study — Chaipoint × Maggi.</div></div><a class="arc-link" href="https://www.instagram.com/p/C8pF5KSo_Qe/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="fnb" data-caps="brand content"><div class="arc-name">Samosa Party</div><div class="arc-cat">fnb</div><div class="arc-hover"><div><div class="arc-role">F&amp;B — Brand Voice</div><div class="arc-note">Case study 03 — brand voice for an everyday snack.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="fnb" data-caps="content"><div class="arc-name">Krispy Kreme</div><div class="arc-cat">fnb</div><div class="arc-hover"><div><div class="arc-role">QSR — Content</div><div class="arc-note">Case study 04 — playful, repeatable visual language.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="hospitality" data-caps="performance"><div class="arc-name">The Cape Goa</div><div class="arc-cat">hospitality</div><div class="arc-hover"><div><div class="arc-role">Hospitality — Growth</div><div class="arc-note">Case study 01 — selling the escape.</div></div><a class="arc-link" href="https://www.instagram.com/reel/DZukipWvNt6/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="hospitality" data-caps=""><div class="arc-name">Sila Leisure</div><div class="arc-cat">hospitality</div><div class="arc-hover"><div><div class="arc-role">Hospitality — Marketing Lead</div><div class="arc-note">Case study 01 — selling the escape.</div></div><a class="arc-link" href="https://www.instagram.com/reel/DVa9lAbEcFF/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps="brand performance"><div class="arc-name">Bella Vita Organic</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Consumer — Performance</div><div class="arc-note">Beauty hero brand, Chatterbox Communications.</div></div><a class="arc-link" href="https://www.instagram.com/reel/CqftBD_jhPH/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps="performance influencer social"><div class="arc-name">Vi-John</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Social / Performance / Influencer</div><div class="arc-note">Chatterbox Communications roster.</div></div><a class="arc-link" href="https://www.instagram.com/reel/CqzlzneoSPE/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps=""><div class="arc-name">Kevin Murphy India</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Premium Haircare</div><div class="arc-note">Premium beauty portfolio.</div></div><a class="arc-link" href="https://www.instagram.com/kevin.murphy_india" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps=""><div class="arc-name">Olaplex India</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Premium Haircare</div><div class="arc-note">Premium beauty portfolio.</div></div><a class="arc-link" href="https://www.instagram.com/p/DQjTwYdlcFy/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="beauty" data-caps=""><div class="arc-name">Dermalogica India</div><div class="arc-cat">beauty</div><div class="arc-hover"><div><div class="arc-role">Premium Skincare</div><div class="arc-note">Premium beauty portfolio.</div></div><a class="arc-link" href="https://www.instagram.com/dermalogicain" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="fashion" data-caps="performance influencer digital"><div class="arc-name">Cahoot (prev. Campus Sutra)</div><div class="arc-cat">fashion</div><div class="arc-hover"><div><div class="arc-role">Consumer — Digital</div><div class="arc-note">3X ROI through influencer marketing.</div></div><a class="arc-link" href="https://www.instagram.com/reel/CysVtHPytzf/" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="fashion" data-caps="performance influencer digital"><div class="arc-name">InstaFab Plus</div><div class="arc-cat">fashion</div><div class="arc-hover"><div><div class="arc-role">Consumer — Digital</div><div class="arc-note">Scaled growth with a celebrity collaboration.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="fashion" data-caps="brand performance influencer"><div class="arc-name">Sohi</div><div class="arc-cat">fashion</div><div class="arc-hover"><div><div class="arc-role">Consumer — Brand</div><div class="arc-note">Celebrity-backed growth, alongside InstaFab Plus.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="content performance influencer"><div class="arc-name">Haute Sauce</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Consumer — Content</div><div class="arc-note">3X ROI through influencer marketing.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance influencer social"><div class="arc-name">Vybe Beauty Fridge</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">ORM / Performance / Influencer</div><div class="arc-note">Billionkart roster.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="social"><div class="arc-name">Pourdemistase</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social Media Marketing</div><div class="arc-note">Billionkart roster.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="social"><div class="arc-name">Pina Colada</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social Media Marketing</div><div class="arc-note">Billionkart roster.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Be Soulfull</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Detoxie Skincare</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Happier Skincare</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Planet Herbs Lifesciences</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="lifestyle" data-caps="performance social"><div class="arc-name">Veda &amp; Grace</div><div class="arc-cat">lifestyle</div><div class="arc-hover"><div><div class="arc-role">Social / ORM / Performance</div><div class="arc-note">Chatterbox Communications roster.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="other" data-caps="influencer"><div class="arc-name">Rapture Entertainment</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Celebrity Manager</div><div class="arc-note">Supported Parthiv Gohil's events &amp; live shows.</div></div><a class="arc-link" href="https://www.instagram.com/parthivgohil9" target="_blank" rel="noopener">Visit brand ↗</a></div></div><div class="arc-item" data-cat="other" data-caps="social"><div class="arc-name">Bajaj Finance</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Social Media Marketing</div><div class="arc-note">Handled at Chtrsocial.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="other" data-caps=""><div class="arc-name">Chetan Rathod Group</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Ad Film</div><div class="arc-note">Created an ad film, Chtrsocial.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="other" data-caps="strategy social"><div class="arc-name">St. Willibrord International School</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Social Strategy</div><div class="arc-note">Early career, Aprowress.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="other" data-caps="strategy social"><div class="arc-name">Willy Kids Pre-school</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Social Strategy</div><div class="arc-note">Early career, Aprowress.</div></div><span class="arc-link">[Add project details]</span></div></div><div class="arc-item" data-cat="other" data-caps="strategy influencer social"><div class="arc-name">Parents As Teachers (PAT)</div><div class="arc-cat">other</div><div class="arc-hover"><div><div class="arc-role">Social Strategy</div><div class="arc-note">Education influencer, Aprowress.</div></div><span class="arc-link">[Add project details]</span></div></div></div>
   </div>
 </section>
 
@@ -1304,8 +1570,9 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
     </div>
     <div class="reveal">
       <div class="about-body">
-        <p>I'm happiest at the intersection of people, culture, brands and business — the point where a consumer insight turns into a piece of content, and a piece of content turns into a number someone in a boardroom actually cares about.</p>
-        <p>Seven years in, I've moved from making the post to owning the strategy, the team and the budget behind it — across chai stalls, resort chains, skincare shelves and celebrity shoots. Different categories keep the thinking sharp; the throughline is always the same obsession — finding the idea that makes people feel something before they realise it's marketing.</p>
+        <p>I started out making content for a living, and somewhere along the way ended up running the whole system behind it — brand, budget, performance and the people who make it happen.</p>
+        <p>Most of my work sits in categories you can eat, drink, or stay in — F&amp;B, hospitality and lifestyle brands where the experience is the product, and marketing has to do more than just show up.</p>
+        <p>I like ideas that are easy to say and hard to copy. And I still can't walk past a badly designed menu without wanting to fix it.</p>
       </div>
       <div class="about-facts">
         <div class="about-fact"><span>Based in</span><span>Bengaluru, India</span></div>
@@ -1323,12 +1590,14 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
     <span class="eyebrow reveal" style="color:var(--sand);">Let's Work Together</span>
     <h2 class="display reveal" style="margin-top:18px;">GOT A BRAND<br>TO BUILD?</h2>
     <div class="contact-links reveal">
-      <a href="mailto:tpriti009@gmail.com" class="btn on-charcoal">Email ↗</a>
+      <a href="mailto:tpriti009@gmail.com" class="btn on-charcoal">tpriti009@gmail.com ↗</a>
       <a href="https://www.linkedin.com/in/prititiwari18" target="_blank" rel="noopener" class="btn on-charcoal ghost">LinkedIn ↗</a>
-      <a href="mailto:tpriti009@gmail.com?subject=Resume%20Request" class="btn on-charcoal ghost">View Resume ↗</a>
+      <a href="mailto:tpriti009@gmail.com?subject=Resume%20Request" class="btn on-charcoal ghost">Request resume ↗</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ============================= FOOTER ============================= -->
 <footer>
@@ -1337,115 +1606,11 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
       <div class="footer-logo">PRITI TIWARI®</div>
       <div class="footer-role">Marketing &amp; Brand Strategist</div>
     </div>
-    <div class="footer-note hand">You've reached the end. Probably.</div>
+    <div class="footer-note hand">Built with too many ideas.</div>
   </div>
 </footer>
 
-<script>
-/* =====================================================================
-   EDITABLE CONTENT — update this data as new project details come in.
-   ===================================================================== */
-const BRANDS = [
-  {name:"Chaipoint", cat:"fnb", role:"Social Media Manager", note:"Flagship F&B case study — Chaipoint × Maggi.", link:null},
-  {name:"Samosa Party", cat:"fnb", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", link:null},
-  {name:"Krispy Kreme", cat:"fnb", role:"F&B", note:"Additional F&B category work.", link:null},
-  {name:"The Cape Goa", cat:"hospitality", role:"Restaurant Marketing", note:"Restaurant vertical — details coming next.", link:null},
-  {name:"Sila Leisure", cat:"hospitality", role:"Marketing Lead", note:"Boutique resort chain — current role.", link:null},
-  {name:"Bella Vita Organic", cat:"beauty", role:"ORM / Performance / Influencer", note:"Beauty hero brand, Chatterbox Communications.", link:null},
-  {name:"Vi-John", cat:"beauty", role:"Social / Performance / Influencer", note:"Chatterbox Communications roster.", link:null},
-  {name:"Kevin Murphy India", cat:"beauty", role:"Premium Haircare", note:"Premium beauty portfolio.", link:null},
-  {name:"Olaplex India", cat:"beauty", role:"Premium Haircare", note:"Premium beauty portfolio.", link:null},
-  {name:"Campus Sutra", cat:"fashion", role:"Influencer / Performance / Content", note:"3X ROI through influencer marketing.", link:null},
-  {name:"InstaFab Plus", cat:"fashion", role:"Celebrity Collaboration", note:"Scaled growth with a celebrity collaboration.", link:null},
-  {name:"Sohi", cat:"fashion", role:"Celebrity Collaboration", note:"Celebrity-backed growth, alongside InstaFab Plus.", link:null},
-  {name:"Haute Sauce", cat:"lifestyle", role:"Influencer / Performance", note:"3X ROI through influencer marketing.", link:null},
-  {name:"Vybe Beauty Fridge", cat:"lifestyle", role:"ORM / Performance / Influencer", note:"Billionkart roster.", link:null},
-  {name:"Pourdemistase", cat:"lifestyle", role:"Social Media Marketing", note:"Billionkart roster.", link:null},
-  {name:"Pina Colada", cat:"lifestyle", role:"Social Media Marketing", note:"Billionkart roster.", link:null},
-  {name:"Be Soulfull", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", link:null},
-  {name:"Detoxie Skincare", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", link:null},
-  {name:"Happier Skincare", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", link:null},
-  {name:"Planet Herbs Lifesciences", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", link:null},
-  {name:"Veda & Grace", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", link:null},
-  {name:"Rapture Entertainment", cat:"other", role:"Celebrity Manager", note:"Supported Parthiv Gohil's events & live shows.", link:null},
-  {name:"Bajaj Finance", cat:"other", role:"Social Media Marketing", note:"Handled at Chtrsocial.", link:null},
-  {name:"Chetan Rathod Group", cat:"other", role:"Ad Film", note:"Created an ad film, Chtrsocial.", link:null},
-  {name:"St. Willibrord International School", cat:"other", role:"Social Strategy", note:"Early career, Aprowress.", link:null},
-  {name:"Willy Kids Pre-school", cat:"other", role:"Social Strategy", note:"Early career, Aprowress.", link:null},
-  {name:"Parents As Teachers (PAT)", cat:"other", role:"Social Strategy", note:"Education influencer, Aprowress.", link:null},
-];
-
-const grid = document.getElementById('archiveGrid');
-function renderArchive(filter){
-  grid.innerHTML = "";
-  BRANDS.filter(b => filter === 'all' || b.cat === filter).forEach(b => {
-    const el = document.createElement('div');
-    el.className = 'arc-item';
-    el.innerHTML = `
-      <div class="arc-name">${b.name}</div>
-      <div class="arc-cat">${b.cat}</div>
-      <div class="arc-hover">
-        <div>
-          <div class="arc-role">${b.role}</div>
-          <div class="arc-note">${b.note}</div>
-        </div>
-        ${b.link ? `<a class="arc-link" href="${b.link}" target="_blank" rel="noopener">Visit brand ↗</a>` : `<span class="arc-link">Details coming next</span>`}
-      </div>`;
-    grid.appendChild(el);
-  });
-}
-renderArchive('all');
-document.getElementById('filterRow').addEventListener('click', (e) => {
-  const btn = e.target.closest('.filter-btn');
-  if(!btn) return;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderArchive(btn.dataset.filter);
-});
-
-/* Mobile menu */
-const burger = document.getElementById('burgerBtn');
-const mmenu = document.getElementById('mobileMenu');
-burger.addEventListener('click', () => {
-  const open = mmenu.classList.toggle('open');
-  burger.setAttribute('aria-expanded', open);
-});
-mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mmenu.classList.remove('open');
-  burger.setAttribute('aria-expanded', 'false');
-}));
-
-/* Rotating badge */
-const words = ["Strategy","Content","Culture","Growth"];
-let wi = 0;
-const rw = document.getElementById('rotWord');
-if(rw && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  setInterval(() => {
-    rw.style.opacity = 0;
-    setTimeout(() => {
-      wi = (wi + 1) % words.length;
-      rw.textContent = words[wi];
-      rw.style.opacity = 1;
-    }, 350);
-  }, 2200);
-}
-
-/* Scroll reveal */
-const revealEls = document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('in-view');
-        io.unobserve(entry.target);
-      }
-    });
-  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
-  revealEls.forEach(el => io.observe(el));
-} else {
-  revealEls.forEach(el => el.classList.add('in-view'));
-}
-</script>
+<!-- ============================= LIGHTBOX ============================= -->
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Media viewer">
   <div class="lb-inner">
     <div class="lb-bar">
@@ -1457,8 +1622,19 @@ if('IntersectionObserver' in window){
   </div>
 </div>
 
-
 <script>
+/* =====================================================================
+   EDITABLE CONTENT — update this data as new project details come in.
+   ===================================================================== */
+/* =====================================================================
+   MEDIA — every work link on the site. Mirrors media.json.
+   RULE: `thumbnail` is ALWAYS a local path. Never point it at a live
+   Instagram CDN URL — those are signed and expire within days.
+   status: "available"       -> renders the cached image
+           "needs_thumbnail" -> renders a designed placeholder tile
+   To fill a placeholder: save the cover to the `thumbnail` path, then
+   run `node scripts/fetch-meta.mjs --rescan` to flip its status.
+   ===================================================================== */
 const MEDIA = [
   {"id":"sila-01","brand":"Sila Leisure","section":"sila","platform":"instagram","kind":"reel","shortcode":"DVa9lAbEcFF","url":"https://www.instagram.com/reel/DVa9lAbEcFF/","thumbnail":"assets/thumbs/ig-DVa9lAbEcFF.jpg","title":"City life takes up your time.","caption":"City life takes up your time.","ratio":"9/16","status":"available"},
   {"id":"sila-02","brand":"Sila Leisure","section":"sila","platform":"instagram","kind":"reel","shortcode":"DVdr7odkeuu","url":"https://www.instagram.com/reel/DVdr7odkeuu/","thumbnail":"assets/thumbs/ig-DVdr7odkeuu.jpg","title":"From meetings… to traffic… to crowded metros.","caption":"From meetings… to traffic… to crowded metros.","ratio":"9/16","status":"available"},
@@ -1500,6 +1676,7 @@ const MEDIA = [
   {"id":"chai-yt-01","brand":"Chaipoint","section":"chaipoint","platform":"youtube","kind":"short","shortcode":"wyFjHreV-XE","url":"https://youtube.com/shorts/wyFjHreV-XE","thumbnail":"assets/thumbs/yt-wyFjHreV-XE.jpg","title":"Our password is strong but the breakfast menu is stronger! Delicious, pocket-friendly options at ₹99.","caption":"","ratio":"16/9","status":"available"},
   {"id":"chai-yt-02","brand":"Chaipoint","section":"chaipoint","platform":"youtube","kind":"short","shortcode":"YbLVZ2QXLqo","url":"https://youtube.com/shorts/YbLVZ2QXLqo","thumbnail":"assets/thumbs/yt-YbLVZ2QXLqo.jpg","title":"Desi Noodle Box made with Maggi® | Flavorful Indian Recipe","caption":"","ratio":"16/9","status":"available"}
 ];
+
 const esc = s => String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const PLAY = '<span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span>';
 
@@ -1536,12 +1713,8 @@ function mediaCard(it, showBrand){
 document.querySelectorAll('.media-block').forEach(block => {
   const section  = block.dataset.media;
   const platform = block.dataset.platform;
-  const brand    = block.dataset.brand;
-  const brands   = block.dataset.brands ? block.dataset.brands.split('|') : null;
   const items = MEDIA.filter(m => m.section === section
     && (!platform || m.platform === platform)
-    && (!brand || m.brand === brand)
-    && (!brands || brands.includes(m.brand))
     && m.status !== 'dead');
   if(!items.length){ block.remove(); return; }
 
@@ -1604,6 +1777,110 @@ document.addEventListener('click', e => {
   if(e.target.closest('[data-lb-close]') || e.target === lb) closeLB();
 });
 document.addEventListener('keydown', e => { if(e.key === 'Escape' && lb.classList.contains('open')) closeLB(); });
+
+const BRANDS = [
+  {name:"Chaipoint", cat:"fnb", role:"F&B — Brand & Campaigns", note:"Flagship F&B case study — Chaipoint × Maggi.", caps:["brand","campaigns"], link:"https://www.instagram.com/p/C8pF5KSo_Qe/"},
+  {name:"Samosa Party", cat:"fnb", role:"F&B — Brand Voice", note:"Case study 03 — brand voice for an everyday snack.", caps:["brand","content"], link:null},
+  {name:"Krispy Kreme", cat:"fnb", role:"QSR — Content", note:"Case study 04 — playful, repeatable visual language.", caps:["content"], link:null},
+  {name:"The Cape Goa", cat:"hospitality", role:"Hospitality — Growth", note:"Case study 01 — selling the escape.", caps:["performance"], link:"https://www.instagram.com/reel/DZukipWvNt6/"},
+  {name:"Sila Leisure", cat:"hospitality", role:"Hospitality — Marketing Lead", note:"Case study 01 — selling the escape.", caps:[], link:"https://www.instagram.com/reel/DVa9lAbEcFF/"},
+  {name:"Bella Vita Organic", cat:"beauty", role:"Consumer — Performance", note:"Beauty hero brand, Chatterbox Communications.", caps:["brand","performance"], link:"https://www.instagram.com/reel/CqftBD_jhPH/"},
+  {name:"Vi-John", cat:"beauty", role:"Social / Performance / Influencer", note:"Chatterbox Communications roster.", caps:["performance","influencer","social"], link:"https://www.instagram.com/reel/CqzlzneoSPE/"},
+  {name:"Kevin Murphy India", cat:"beauty", role:"Premium Haircare", note:"Premium beauty portfolio.", caps:[], link:"https://www.instagram.com/kevin.murphy_india"},
+  {name:"Olaplex India", cat:"beauty", role:"Premium Haircare", note:"Premium beauty portfolio.", caps:[], link:"https://www.instagram.com/p/DQjTwYdlcFy/"},
+  {name:"Dermalogica India", cat:"beauty", role:"Premium Skincare", note:"Premium beauty portfolio.", caps:[], link:"https://www.instagram.com/dermalogicain"},
+  {name:"Cahoot (prev. Campus Sutra)", cat:"fashion", role:"Consumer — Digital", note:"3X ROI through influencer marketing.", caps:["performance","influencer","digital"], link:"https://www.instagram.com/reel/CysVtHPytzf/"},
+  {name:"InstaFab Plus", cat:"fashion", role:"Consumer — Digital", note:"Scaled growth with a celebrity collaboration.", caps:["performance","influencer","digital"], link:null},
+  {name:"Sohi", cat:"fashion", role:"Consumer — Brand", note:"Celebrity-backed growth, alongside InstaFab Plus.", caps:["brand","performance","influencer"], link:null},
+  {name:"Haute Sauce", cat:"lifestyle", role:"Consumer — Content", note:"3X ROI through influencer marketing.", caps:["content","performance","influencer"], link:null},
+  {name:"Vybe Beauty Fridge", cat:"lifestyle", role:"ORM / Performance / Influencer", note:"Billionkart roster.", caps:["performance","influencer","social"], link:null},
+  {name:"Pourdemistase", cat:"lifestyle", role:"Social Media Marketing", note:"Billionkart roster.", caps:["social"], link:null},
+  {name:"Pina Colada", cat:"lifestyle", role:"Social Media Marketing", note:"Billionkart roster.", caps:["social"], link:null},
+  {name:"Be Soulfull", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", caps:["performance","social"], link:null},
+  {name:"Detoxie Skincare", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", caps:["performance","social"], link:null},
+  {name:"Happier Skincare", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", caps:["performance","social"], link:null},
+  {name:"Planet Herbs Lifesciences", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", caps:["performance","social"], link:null},
+  {name:"Veda & Grace", cat:"lifestyle", role:"Social / ORM / Performance", note:"Chatterbox Communications roster.", caps:["performance","social"], link:null},
+  {name:"Rapture Entertainment", cat:"other", role:"Celebrity Manager", note:"Supported Parthiv Gohil's events & live shows.", caps:["influencer"], link:"https://www.instagram.com/parthivgohil9"},
+  {name:"Bajaj Finance", cat:"other", role:"Social Media Marketing", note:"Handled at Chtrsocial.", caps:["social"], link:null},
+  {name:"Chetan Rathod Group", cat:"other", role:"Ad Film", note:"Created an ad film, Chtrsocial.", caps:[], link:null},
+  {name:"St. Willibrord International School", cat:"other", role:"Social Strategy", note:"Early career, Aprowress.", caps:["strategy","social"], link:null},
+  {name:"Willy Kids Pre-school", cat:"other", role:"Social Strategy", note:"Early career, Aprowress.", caps:["strategy","social"], link:null},
+  {name:"Parents As Teachers (PAT)", cat:"other", role:"Social Strategy", note:"Education influencer, Aprowress.", caps:["strategy","influencer","social"], link:null}
+];
+
+const grid = document.getElementById('archiveGrid');
+function renderArchive(filter){
+  grid.innerHTML = "";
+  const capFilter = filter.startsWith('cap:') ? filter.slice(4) : null;
+  BRANDS.filter(b => filter === 'all'
+    || (capFilter ? (b.caps || []).includes(capFilter) : b.cat === filter)).forEach(b => {
+    const el = document.createElement('div');
+    el.className = 'arc-item';
+    el.innerHTML = `
+      <div class="arc-name">${b.name}</div>
+      <div class="arc-cat">${b.cat}</div>
+      <div class="arc-hover">
+        <div>
+          <div class="arc-role">${b.role}</div>
+          <div class="arc-note">${b.note}</div>
+        </div>
+        ${b.link ? `<a class="arc-link" href="${b.link}" target="_blank" rel="noopener">Visit brand ↗</a>` : `<span class="arc-link">[Add project details]</span>`}
+      </div>`;
+    grid.appendChild(el);
+  });
+}
+renderArchive('all');
+document.getElementById('filterRow').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-btn');
+  if(!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderArchive(btn.dataset.filter);
+});
+
+/* Mobile menu */
+const burger = document.getElementById('burgerBtn');
+const mmenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  const open = mmenu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mmenu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+}));
+
+/* Rotating badge */
+const words = ["Strategy","Content","Culture","Growth"];
+let wi = 0;
+const rw = document.getElementById('rotWord');
+if(rw && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  setInterval(() => {
+    rw.style.opacity = 0;
+    setTimeout(() => {
+      wi = (wi + 1) % words.length;
+      rw.textContent = words[wi];
+      rw.style.opacity = 1;
+    }, 350);
+  }, 2200);
+}
+
+/* Scroll reveal */
+const revealEls = document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+  revealEls.forEach(el => io.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('in-view'));
+}
 </script>
 </body>
 </html>
