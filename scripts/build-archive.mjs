@@ -146,10 +146,24 @@ const staticArchive = records.map(b =>
   + `</div></div>`
 ).join('');
 
-html = html.replace(
-  /<div class="archive-grid reveal" id="archiveGrid">[\s\S]*?<\/div>(?=\s*<)/,
-  `<div class="archive-grid reveal" id="archiveGrid">${staticArchive}</div>`
-);
+/* Depth-match the grid's own closing tag. A non-greedy regex stops at the
+   first </div>, which on an already-rendered grid is the first item's, so
+   re-running appended a second copy instead of replacing the first. */
+{
+  const open = html.indexOf('<div class="archive-grid reveal" id="archiveGrid">');
+  if (open === -1) throw new Error('archiveGrid container not found');
+  const tag = /<div\b|<\/div>/g;
+  tag.lastIndex = open;
+  let depth = 0, m, close = -1;
+  while ((m = tag.exec(html))) {
+    if (m[0] === '</div>') { if (--depth === 0) { close = tag.lastIndex; break; } }
+    else depth++;
+  }
+  if (close === -1) throw new Error('unbalanced <div> in archiveGrid');
+  html = html.slice(0, open)
+    + `<div class="archive-grid reveal" id="archiveGrid">${staticArchive}</div>`
+    + html.slice(close);
+}
 
 await writeFile(HTML, html, 'utf8');
 console.log(`${total} archive brands · ${wired} links wired · ${tagged} capability-tagged`);
