@@ -1,7 +1,7 @@
 {
   "_schema": {
     "version": 1,
-    "generatedAt": "2026-09-02T09:49:10.854Z",
+    "generatedAt": "2026-09-02T09:58:33.783Z",
     "note": "Source of truth for every work link on the site. index.html renders from an inlined copy of `items` (const MEDIA). Never point `thumbnail` at a live Instagram CDN URL — those are signed and expire. Cache locally under assets/thumbs/ and reference that path.",
     "statusValues": {
       "available": "thumbnail exists locally at `thumbnail` and renders as an image",
@@ -301,7 +301,7 @@
     },
     {
       "id": "cahoot-01",
-      "brand": "Cahoot",
+      "brand": "Campus Sutra",
       "section": "cahoot",
       "platform": "instagram",
       "kind": "reel",
@@ -319,7 +319,7 @@
     },
     {
       "id": "cahoot-02",
-      "brand": "Cahoot",
+      "brand": "Campus Sutra",
       "section": "cahoot",
       "platform": "instagram",
       "kind": "reel",
@@ -337,7 +337,7 @@
     },
     {
       "id": "cahoot-03",
-      "brand": "Cahoot",
+      "brand": "Campus Sutra",
       "section": "cahoot",
       "platform": "instagram",
       "kind": "reel",
@@ -355,7 +355,7 @@
     },
     {
       "id": "cahoot-04",
-      "brand": "Cahoot",
+      "brand": "Campus Sutra",
       "section": "cahoot",
       "platform": "instagram",
       "kind": "reel",
@@ -373,7 +373,7 @@
     },
     {
       "id": "cahoot-05",
-      "brand": "Cahoot",
+      "brand": "Campus Sutra",
       "section": "cahoot",
       "platform": "instagram",
       "kind": "reel",
@@ -391,7 +391,7 @@
     },
     {
       "id": "cahoot-06",
-      "brand": "Cahoot",
+      "brand": "Campus Sutra",
       "section": "cahoot",
       "platform": "instagram",
       "kind": "reel",

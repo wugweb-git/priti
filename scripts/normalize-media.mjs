@@ -172,9 +172,11 @@ let grids = 0, cards = 0;
 
     const platform = get('platform');
     const brand = get('brand');
+    const brands = get('brands') ? get('brands').split('|') : null;
     const items = db.items.filter(i => i.section === section
       && (!platform || i.platform === platform)
       && (!brand || i.brand === brand)
+      && (!brands || brands.includes(i.brand))
       && i.status !== 'dead');
     if (!items.length) { open.lastIndex = stop; continue; }
 
