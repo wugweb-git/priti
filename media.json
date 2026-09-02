@@ -1,7 +1,7 @@
 {
   "_schema": {
     "version": 1,
-    "generatedAt": "2026-09-02T10:27:43.170Z",
+    "generatedAt": "2026-09-02T10:38:20.629Z",
     "note": "Source of truth for every work link on the site. index.html renders from an inlined copy of `items` (const MEDIA). Never point `thumbnail` at a live Instagram CDN URL — those are signed and expire. Cache locally under assets/thumbs/ and reference that path.",
     "statusValues": {
       "available": "thumbnail exists locally at `thumbnail` and renders as an image",
