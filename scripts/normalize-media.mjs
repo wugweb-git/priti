@@ -34,11 +34,18 @@ function decode(s) {
     .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
 }
 
-/** 'ACCOUNT on Instagram: "caption"' -> caption. Leaves anything else alone. */
+/**
+ * 'ACCOUNT on Instagram: "caption"' -> caption.
+ *
+ * Returns '' for anything that does not match that shape. Some records still
+ * carry a hand-written label from the original link list; promoting one of
+ * those to `caption` would present an author's note as fetched platform data,
+ * so an unmatched value is discarded rather than passed through.
+ */
 function extractCaption(raw) {
   const s = decode(raw).trim();
-  const m = s.match(/^.*? on Instagram:\s*["""](.*)[""']\s*$/s);
-  return (m ? m[1] : s).trim();
+  const m = s.match(/^.*? on Instagram:\s*["“”"](.*)["“”"]\s*$/s);
+  return m ? m[1].trim() : '';
 }
 
 /** First meaningful line, trimmed to a word boundary, hashtag tail dropped. */
@@ -67,7 +74,10 @@ for (const it of db.items) {
     it.title = '';
     continue;
   }
-  const caption = extractCaption(it.title || '');
+  // Idempotent: once a caption has been extracted, `title` holds the short
+  // display line, not the raw og:title, so re-parsing it would discard the
+  // caption. Only parse a record that has not been normalised yet.
+  const caption = it.caption ? it.caption : extractCaption(it.title || '');
   it.caption = caption;
   it.title = displayTitle(caption);
   if (caption) captioned++;
@@ -93,7 +103,74 @@ const slim = db.items.map(i => ({
 }));
 
 const block = 'const MEDIA = [\n' + slim.map(o => '  ' + JSON.stringify(o)).join(',\n') + '\n';
-await writeFile(HTML, html.slice(0, start) + block + html.slice(end), 'utf8');
+let out = html.slice(0, start) + block + html.slice(end);
+
+/* ---- pre-render the media grids into the HTML --------------------------- */
+/* The brief requires the page to work with JavaScript disabled. The grids used
+   to be built entirely at runtime, so with JS off every work link vanished.
+   Emitting the same markup here means the work is in the document itself; the
+   runtime script only adds the lightbox and the broken-image fallback. */
+
+const esc = (v) => String(v ?? '')
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;');
+
+const TINTS = ['rgba(229,67,43,.10)', 'rgba(240,189,62,.14)', 'rgba(39,67,214,.09)',
+               'rgba(240,120,154,.12)', 'rgba(107,107,58,.11)', 'rgba(201,180,140,.16)'];
+const tintFor = (s) => TINTS[[...String(s)].reduce((a, c) => a + c.charCodeAt(0), 0) % TINTS.length];
+const PLAY = '<span class="m-play"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z"/></svg></span>';
+
+function card(it, showBrand) {
+  const isProfile = it.kind === 'profile';
+  const platform = it.platform === 'youtube' ? 'YouTube' : 'Instagram';
+  const alt = it.title || `${it.brand} — ${platform} ${it.kind}`;
+  const shot = it.status === 'available' && it.thumbnail
+    ? `<img src="${esc(it.thumbnail)}" alt="${esc(alt)}" loading="lazy" decoding="async" width="640" height="800">${isProfile ? '' : PLAY}`
+    : `<div class="m-ph" style="--ph-tint:${tintFor(it.shortcode)}">`
+      + `<div class="m-ph-brand">${esc(it.brand)}</div>`
+      + (isProfile ? '' : `<div class="m-ph-code">${esc(it.shortcode)}</div>`)
+      + `</div>${isProfile ? '' : PLAY}`;
+
+  const caption = it.title || (showBrand ? it.brand : '');
+  const foot = `<div class="m-foot">`
+    + `<div class="m-kind">${platform} · ${esc(it.kind)}</div>`
+    + (caption ? `<div class="m-title">${esc(caption)}</div>` : '')
+    + `<span class="m-open">${isProfile ? 'View profile' : 'Play'} ↗</span></div>`;
+
+  const inner = `<div class="m-shot">${shot}</div>${foot}`;
+  const openAttr = isProfile ? '' : ` data-open="${esc(it.id)}"`;
+  return `<a class="m-card" data-ratio="${esc(it.ratio)}"${openAttr} href="${esc(it.url)}" target="_blank" rel="noopener">${inner}</a>`;
+}
+
+let grids = 0, cards = 0;
+out = out.replace(
+  /<div class="media-block([^"]*)"([^>]*)>[\s\S]*?<\/div>(?=\s*(?:<|$))/g,
+  (whole, cls, attrs) => {
+    const get = (n) => attrs.match(new RegExp(`data-${n}="([^"]*)"`))?.[1] ?? '';
+    const section = get('media');
+    if (!section) return whole;
+    const platform = get('platform');
+    const items = db.items.filter(m => m.section === section
+      && (!platform || m.platform === platform) && m.status !== 'dead');
+    if (!items.length) return whole;
+
+    const showBrand = get('showbrand') === '1';
+    const label = get('label') || 'Published Work';
+    grids++; cards += items.length;
+
+    const styleAttr = attrs.match(/style="([^"]*)"/)?.[0] ?? '';
+    return `<div class="media-block${cls}"${attrs.replace(/\s*style="[^"]*"/, '')} ${styleAttr}>`
+      + `<div class="media-block-head">`
+      + `<span class="media-block-title">${esc(label)}</span>`
+      + `<span class="media-block-count">${items.length} link${items.length > 1 ? 's' : ''}</span>`
+      + `</div>`
+      + `<div class="media-grid${get('wide') === '1' ? ' wide' : ''}">`
+      + items.map(it => card(it, showBrand)).join('')
+      + `</div></div>`;
+  }
+);
+
+await writeFile(HTML, out, 'utf8');
 
 console.log(`normalised ${db.items.length} items · ${captioned} captions decoded`);
-console.log('media.json rewritten and index.html MEDIA block synced.');
+console.log(`pre-rendered ${grids} media grids · ${cards} cards into index.html (works without JS)`);

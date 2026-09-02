@@ -1,7 +1,7 @@
 {
   "_schema": {
     "version": 1,
-    "generatedAt": "2026-09-02T09:26:19.456Z",
+    "generatedAt": "2026-09-02T09:35:54.034Z",
     "note": "Source of truth for every work link on the site. index.html renders from an inlined copy of `items` (const MEDIA). Never point `thumbnail` at a live Instagram CDN URL — those are signed and expire. Cache locally under assets/thumbs/ and reference that path.",
     "statusValues": {
       "available": "thumbnail exists locally at `thumbnail` and renders as an image",
@@ -416,14 +416,14 @@
       "shortcode": "C3P1A_JSCP4",
       "url": "https://www.instagram.com/reel/C3P1A_JSCP4/",
       "thumbnail": "assets/thumbs/ig-C3P1A_JSCP4.jpg",
-      "title": "Celebrity collab shoot",
+      "title": "",
       "ratio": "9/16",
       "fetchedAt": "2026-09-02T09:24:11.370Z",
       "status": "available",
       "_sourceUrl": "https://scontent.cdninstagram.com/v/t51.71878-15/503401832_1817949682115228_2444117823347355922_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=Q6BhfXRJJQgQ7kNvwHu8xrR&_nc_oc=AdqsaM0QJpLQSXZX7m-r-4_iYDAlcWzW1pT-2-pNMo-Z-j8nT_xkYWAdMN49Hfjr6A52HfJRqjSQCBFZuYX6xSZn&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=PZKas8cYaZcD7IWbF9CcQQ&_nc_ss=7f689&oh=00_AQIjusdRHZ_z_x6g6GMncTGIZ8KI2ZsNHaSxTHWEUa1Ebg&oe=6A9DA1CC",
       "_via": "og:facebookexternalhit",
       "author": "instafabplus",
-      "caption": "Celebrity collab shoot"
+      "caption": ""
     },
     {
       "id": "celeb-02",
@@ -434,14 +434,14 @@
       "shortcode": "C2uSo-ZqeDk",
       "url": "https://www.instagram.com/reel/C2uSo-ZqeDk/",
       "thumbnail": "assets/thumbs/ig-C2uSo-ZqeDk.jpg",
-      "title": "Celebrity collab shoot",
+      "title": "",
       "ratio": "9/16",
       "fetchedAt": "2026-09-02T09:24:12.762Z",
       "status": "available",
       "_sourceUrl": "https://scontent.cdninstagram.com/v/t51.71878-15/503747465_1218100326678111_7839101963158113980_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=4IwD0tm2NFcQ7kNvwHsHj2d&_nc_oc=AdoW1BstdnjGFVGZ6886NS8VEADulHCJyBBxFOEZkI-mZKm-oZxZI4Be93_xky813m_a9iPBSWaGiM7C0AAg-7WM&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=z8MsQ3l5NrNJB5F31_cR-A&_nc_ss=7f689&oh=00_AQJK6FHTZRHvsZo9pI5LEJHisJj3vN-TRpUOta7Kr7Xxjw&oe=6A9DC518",
       "_via": "og:facebookexternalhit",
       "author": "fukravarun",
-      "caption": "Celebrity collab shoot"
+      "caption": ""
     },
     {
       "id": "celeb-03",
@@ -452,14 +452,14 @@
       "shortcode": "C2hK0DcySnQ",
       "url": "https://www.instagram.com/reel/C2hK0DcySnQ/",
       "thumbnail": "assets/thumbs/ig-C2hK0DcySnQ.jpg",
-      "title": "Celebrity collab shoot",
+      "title": "",
       "ratio": "9/16",
       "fetchedAt": "2026-09-02T09:24:13.972Z",
       "status": "available",
       "_sourceUrl": "https://scontent.cdninstagram.com/v/t51.71878-15/503040265_1923453945056315_6006546831954541934_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=U1S3yXOv1LYQ7kNvwFspsZZ&_nc_oc=AdppYMfkQf_DXE-GK_t0AM_q4t1mtYNkNVocZjR_xc0jn2DfueWXhOBVWPcbpd-VfxkrhiiySYpvs0jp_Vhbhhdq&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=FkKR4OPyrndIz02PPd5j0Q&_nc_ss=7f689&oh=00_AQK9y7g1CJUmbbIYREqy6s4PfxwX64ur0b61LpQeF31TxQ&oe=6A9DA25C",
       "_via": "og:facebookexternalhit",
       "author": "instafabplus",
-      "caption": "Celebrity collab shoot"
+      "caption": ""
     },
     {
       "id": "celeb-04",
@@ -470,14 +470,14 @@
       "shortcode": "C3h3VaVyQE5",
       "url": "https://www.instagram.com/reel/C3h3VaVyQE5/",
       "thumbnail": "assets/thumbs/ig-C3h3VaVyQE5.jpg",
-      "title": "Celebrity collab shoot",
+      "title": "",
       "ratio": "9/16",
       "fetchedAt": "2026-09-02T09:24:15.520Z",
       "status": "available",
       "_sourceUrl": "https://scontent.cdninstagram.com/v/t51.71878-15/503687884_1772399504158380_2415029152005725849_n.jpg?stp=cmp1_dst-jpg_e35_s640x640_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=562pgy46ajkQ7kNvwGB88DW&_nc_oc=AdoPgse357cU74xt2wSz_EfEnlIQdxusPdYJm5sWEzgEgpmk6p2BmzMGOi9IelIZ3-lE5rEYyBiY_bxYOfqxvNu1&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=c9PduP4c7TynVtxEuALvGg&_nc_ss=7f689&oh=00_AQIrawMUS_0ZbDJJcOKq7rg0YiiDY7LanBZmW5sSaWJbCw&oe=6A9DA6E0",
       "_via": "og:facebookexternalhit",
       "author": "instafabplus",
-      "caption": "Celebrity collab shoot"
+      "caption": ""
     },
     {
       "id": "bellavita-01",
