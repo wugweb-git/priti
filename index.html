@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Priti Tiwari — Marketing &amp; Brand Strategist</title>
 <meta name="description" content="Priti Tiwari — Marketing & Brand Strategist across F&B, Hospitality, Beauty, Fashion & Lifestyle. Building brands through strategy, storytelling, culture & growth.">
+<link rel="canonical" href="https://wugweb-git.github.io/priti/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Priti Tiwari — Marketing &amp; Brand Strategist">
+<meta property="og:description" content="Marketing &amp; Brand Strategist across F&amp;B, Hospitality, Beauty, Fashion &amp; Lifestyle.">
+<meta property="og:url" content="https://wugweb-git.github.io/priti/">
+<meta property="og:image" content="https://wugweb-git.github.io/priti/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Priti Tiwari — Marketing &amp; Brand Strategist">
+<meta name="twitter:description" content="Marketing &amp; Brand Strategist across F&amp;B, Hospitality, Beauty, Fashion &amp; Lifestyle.">
+<meta name="twitter:image" content="https://wugweb-git.github.io/priti/assets/og.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F6F1E6'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23E5432B'>P</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -686,6 +697,15 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
 .lb-out{font-family:var(--f-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--butter); display:inline-flex; gap:6px;}
 
 .reveal{}
+
+/* ---------- overflow containment ---------- */
+/* Grid and flex children size to their widest child unless min-width is reset,
+   so the work grids pushed the hospitality tracks ~327px past the viewport. */
+.hosp-split > *, .brand-feature > *, .celeb-panel > *, .industry-body > *,
+.brand-row > *, .media-block, .media-grid, .cs-block-inner > *{min-width:0;}
+.media-grid{max-width:100%;}
+.nav-inner{max-width:100%; gap:12px;}
+.nav-logo{white-space:nowrap;}
 </style>
 <noscript><style>.reveal{opacity:1 !important; transform:none !important;}</style></noscript>
 </head>
