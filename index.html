@@ -801,6 +801,12 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
   .industry-line{margin-left:0;}
 }
 </style>
+<noscript><style>
+/* The reveal animation starts at opacity:0 and is switched on by script. With
+   JavaScript disabled nothing ever adds .in-view, so every revealed block —
+   the whole page body — stayed invisible. Show it all, unanimated. */
+.reveal{opacity:1 !important; transform:none !important;}
+</style></noscript>
 </head>
 <body>
 
