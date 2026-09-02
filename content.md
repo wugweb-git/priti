@@ -53,8 +53,10 @@ new file doesn't cover, it is retained — not omitted. Conflicts are listed in 
 ## 4. Explicit unavailable states (no fake data)
 
 - Cases 03 and 04: "Details to be added — full campaign metrics available on request." + a `Metrics not published` badge
-- 36 Instagram tiles: designed placeholder (brand + shortcode + working link), never a broken image
-- Remaining `[Add project details]` cards and hero-media slots: unchanged, still empty
+- All 39 tiles now render a real cached cover; the designed placeholder remains as the fallback,
+  wired to both a status gate and an `onerror` handler
+- Author TODOs (`[Add project details]`, `coming next`) replaced with honest "not published" states
+- Hero-media slots: unchanged, still empty
 
 ## 5. Deduplication
 
@@ -64,14 +66,22 @@ Samosa Party and Krispy Kreme brand cards link to `#case-03` / `#case-04` instea
 
 ## 6. Media pipeline (unchanged from spec)
 
-Priority: Graph API → oEmbed → og:image → manual. Instagram is blocked at 1–3 without a token, so
-**manual is the live path**. Thumbnails are always local files; no live Instagram CDN URL is ever a
-dependency.
+Priority: Graph API → oEmbed → og:image → manual. **og:image is the live path.**
 
-| Platform | Links | Thumbnails |
-|---|---|---|
-| YouTube | 2 | ✅ cached 1280×720 via public oEmbed |
-| Instagram | 37 | ⚠️ pending — save to `assets/thumbs/ig-<shortcode>.jpg`, run `node scripts/fetch-meta.mjs --rescan` |
+Correction to an earlier version of this note, which said Instagram was blocked and manual capture
+was the only option. That was wrong. Instagram serves `og:` tags to link-preview crawlers but not to
+browser user-agents — a Chrome UA gets a ~620KB JavaScript shell with no metadata, which is why the
+first attempt came back empty. Requesting as `facebookexternalhit` returns the cover image, the full
+caption and the owning account handle. Thumbnails are always local files; no live Instagram CDN URL
+is ever a dependency.
+
+| Platform | Links | Thumbnails | Captions |
+|---|---|---|---|
+| YouTube | 2 | ✅ cached via public oEmbed | ✅ 2 |
+| Instagram | 37 | ✅ 37 cached via og:image | ✅ 27 (4 celeb reels and 4 profiles expose none) |
+
+Engagement counts remain unavailable and are not guessed. Instagram exposes them only to a token
+that owns the post; YouTube needs a Data API key (`YOUTUBE_API_KEY`).
 
 ## 7. Defects fixed in passing
 
@@ -89,11 +99,16 @@ system is intact.
 
 ## 8. Still open — needs you
 
-1. Confirm `hello@pritiwari.com` is live, or revert to the Gmail address
-2. Chaipoint vs Chai Point — pick one
-3. Campus Sutra vs Cahoot — pick one
-4. Name the celebrity in the InstaFab Plus / Sohi collab
+1. ~~Confirm `hello@pritiwari.com`~~ — **resolved: `pritiwari.com` is unregistered** (`whois`: "No
+   match for domain"). It was the primary contact CTA *and* the canonical / og:url / og:image host.
+   All now point at the live Pages URL and `tpriti009@gmail.com`. Register the domain to change this.
+2. Chaipoint vs Chai Point — evidence now favours **Chai Point**: their own Instagram handle is
+   `@chai_point` and the YouTube channel name returned by oEmbed is "Chai Point". Still your call.
+3. ~~Campus Sutra vs Cahoot~~ — **resolved: Cahoot**, with "previously Campus Sutra" kept as context
+4. Name the celebrity in the InstaFab Plus / Sohi collab — one of the four reels
+   (`C2uSo-ZqeDk`) is posted by **@fukravarun**, the other three by `@instafabplus`. Not published as
+   fact, since account-of-origin is not the same as confirmed casting. Confirm and I'll add it.
 5. Name "Brand 2" at Sila Leisure, or drop the ₹10L figure
 6. 8 brand cards still say `[Add project details]`; 6 hero-media slots still empty
-7. Capture the 37 Instagram thumbnails
+7. ~~Capture the 37 Instagram thumbnails~~ — **done, all 37 fetched via og:image**
 8. Every receipt figure is self-reported — decide which you can evidence
