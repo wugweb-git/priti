@@ -815,6 +815,19 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
 .media-grid{max-width:100%;}
 .nav-inner{max-width:100%; gap:12px;}
 .nav-logo{white-space:nowrap;}
+
+/* ---------- very narrow screens (<=360px) ---------- */
+/* The nav, mobile menu and receipts grid had a hard floor of ~365px, which
+   overflows a 320px device. Tighten the gutter and let the grids go to one
+   column so nothing is cut off. */
+@media (max-width:360px){
+  :root{--pad:14px;}
+  .receipt-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));}
+  .nav-inner{padding-left:14px; padding-right:14px;}
+  .mobile-menu{padding-left:14px; padding-right:14px;}
+  .njs-tags{gap:8px;}
+  .chip-row{gap:8px;}
+}
 </style>
 <noscript><style>
 /* The reveal animation starts at opacity:0 and is switched on by script. With
