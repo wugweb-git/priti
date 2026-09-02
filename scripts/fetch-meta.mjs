@@ -111,19 +111,42 @@ async function viaYouTube(item) {
 }
 
 /* ---------- 3. Public og:image scrape ----------------------------------- */
+/* Instagram serves og: tags to link-preview crawlers but not to browser UAs —
+   a normal Chrome UA gets a ~620KB JS shell with no metadata, which is why
+   this path used to come back empty. Ask as an unfurler and the cover, the
+   owning handle and the canonical URL are all present. Caption and engagement
+   counts are never exposed here; those stay unavailable rather than guessed. */
+const CRAWLER_UA = 'facebookexternalhit/1.1';
+
+function decodeEntities(s) {
+  return s.replace(/&amp;/g, '&').replace(/&#0?39;/g, "'").replace(/&quot;/g, '"')
+          .replace(/&#0?64;/g, '@').replace(/&#x2022;/g, '·').replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>');
+}
+
 async function viaOpenGraph(item) {
-  for (const target of [item.url, item.url.replace(/\/$/, '') + '/embed/captioned/']) {
-    try {
-      const r = await fetch(target, { headers: { 'User-Agent': UA, 'Accept-Language': 'en-US,en;q=0.9' } });
-      if (!r.ok) continue;
-      const html = await r.text();
-      const og = html.match(/property=["']og:image["']\s+content=["']([^"']+)["']/i)?.[1]
-        || html.match(/name=["']twitter:image["']\s+content=["']([^"']+)["']/i)?.[1]
-        || html.match(/"display_url":"([^"]+)"/)?.[1]?.replace(/\\u0026/g, '&');
-      if (!og) continue;
-      const title = html.match(/property=["']og:title["']\s+content=["']([^"']+)["']/i)?.[1] || '';
-      return { src: og.replace(/&amp;/g, '&'), title, via: 'og' };
-    } catch { /* next */ }
+  for (const ua of [CRAWLER_UA, 'Twitterbot/1.0', UA]) {
+    for (const target of [item.url, item.url.replace(/\/$/, '') + '/embed/captioned/']) {
+      try {
+        const r = await fetch(target, { headers: { 'User-Agent': ua, 'Accept-Language': 'en-US,en;q=0.9' } });
+        if (!r.ok) continue;
+        const html = await r.text();
+        const og = html.match(/property=["']og:image["']\s+content=["']([^"']+)["']/i)?.[1]
+          || html.match(/name=["']twitter:image["']\s+content=["']([^"']+)["']/i)?.[1]
+          || html.match(/"display_url":"([^"]+)"/)?.[1]?.replace(/\\u0026/g, '&');
+        if (!og) continue;
+
+        // og:url carries the owning account, e.g. /silaleisure/reel/<code>/
+        const canonical = html.match(/property=["']og:url["']\s+content=["']([^"']+)["']/i)?.[1] || '';
+        const author = canonical.match(/instagram\.com\/([^/]+)\//)?.[1] || '';
+        // twitter:title is "ACCOUNT (@handle) • Instagram reel" — a label, not a caption.
+        const title = decodeEntities(
+          html.match(/property=["']og:title["']\s+content=["']([^"']+)["']/i)?.[1]
+          || html.match(/name=["']twitter:title["']\s+content=["']([^"']+)["']/i)?.[1] || ''
+        );
+        return { src: decodeEntities(og), title, author, via: `og:${ua.split('/')[0]}` };
+      } catch { /* next */ }
+    }
   }
   return null;
 }
