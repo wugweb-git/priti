@@ -142,33 +142,61 @@ function card(it, showBrand) {
   return `<a class="m-card" data-ratio="${esc(it.ratio)}"${openAttr} href="${esc(it.url)}" target="_blank" rel="noopener">${inner}</a>`;
 }
 
+/**
+ * Find the index just past the `</div>` that closes the `<div` at `start`.
+ * A regex cannot do this: a non-greedy match stops at the first `</div>`, which
+ * for an already-rendered block is the inner grid's, truncating it and leaving
+ * stray closing tags behind. Matching by depth keeps the rewrite idempotent.
+ */
+function endOfDiv(s, start) {
+  const tag = /<div\b|<\/div>/g;
+  tag.lastIndex = start;
+  let depth = 0, m;
+  while ((m = tag.exec(s))) {
+    if (m[0] === '</div>') { if (--depth === 0) return tag.lastIndex; }
+    else depth++;
+  }
+  throw new Error('unbalanced <div> while scanning a media-block');
+}
+
 let grids = 0, cards = 0;
-out = out.replace(
-  /<div class="media-block([^"]*)"([^>]*)>[\s\S]*?<\/div>(?=\s*(?:<|$))/g,
-  (whole, cls, attrs) => {
+{
+  const open = /<div class="media-block([^"]*)"([^>]*)>/g;
+  let m, pieces = [], cursor = 0;
+  while ((m = open.exec(out))) {
+    const [, cls, attrs] = m;
     const get = (n) => attrs.match(new RegExp(`data-${n}="([^"]*)"`))?.[1] ?? '';
     const section = get('media');
-    if (!section) return whole;
+    const stop = endOfDiv(out, m.index);
+    if (!section) { open.lastIndex = stop; continue; }
+
     const platform = get('platform');
-    const items = db.items.filter(m => m.section === section
-      && (!platform || m.platform === platform) && m.status !== 'dead');
-    if (!items.length) return whole;
+    const brand = get('brand');
+    const items = db.items.filter(i => i.section === section
+      && (!platform || i.platform === platform)
+      && (!brand || i.brand === brand)
+      && i.status !== 'dead');
+    if (!items.length) { open.lastIndex = stop; continue; }
 
     const showBrand = get('showbrand') === '1';
     const label = get('label') || 'Published Work';
     grids++; cards += items.length;
 
-    const styleAttr = attrs.match(/style="([^"]*)"/)?.[0] ?? '';
-    return `<div class="media-block${cls}"${attrs.replace(/\s*style="[^"]*"/, '')} ${styleAttr}>`
+    pieces.push(out.slice(cursor, m.index));
+    pieces.push(`<div class="media-block${cls}"${attrs}>`
       + `<div class="media-block-head">`
       + `<span class="media-block-title">${esc(label)}</span>`
       + `<span class="media-block-count">${items.length} link${items.length > 1 ? 's' : ''}</span>`
       + `</div>`
       + `<div class="media-grid${get('wide') === '1' ? ' wide' : ''}">`
       + items.map(it => card(it, showBrand)).join('')
-      + `</div></div>`;
+      + `</div></div>`);
+    cursor = stop;
+    open.lastIndex = stop;
   }
-);
+  pieces.push(out.slice(cursor));
+  out = pieces.join('');
+}
 
 await writeFile(HTML, out, 'utf8');
 
