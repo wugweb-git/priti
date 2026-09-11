@@ -1,0 +1,71 @@
+{
+  "_note": "The five niches: homepage cards, dedicated pages, and social-preview images. Covers and thumbnails are picked by real Instagram engagement (media.json metrics), never by guess. Every receipt is copied from the 'WORK WORK WORK' write-up; they are self-reported portfolio figures, kept separate from live platform counts.",
+  "site": "https://wugweb-git.github.io/priti/",
+  "niches": [
+    {
+      "slug": "hospitality", "cls": "hosp", "num": "01",
+      "name": "Hospitality & Travel",
+      "title_html": "Hospitality<br><span class=\"accent\">&amp; Travel.</span>",
+      "thesis": "I sold the escape. Then I measured it.",
+      "brands": ["Sila Leisure", "The Cape Goa"],
+      "proof": "4,000+ leads / mo",
+      "cover": "sila-05", "cover_thumb": "assets/thumbs/ig-DWjLvxpRfXb.jpg",
+      "minis": ["cape-02", "sila-08", "cape-06"],
+      "receipts": [["₹5.5L / month", "ad spend managed"], ["4,000+", "leads / month"], ["3X+", "ROI"], ["₹1.5 Cr / month", "revenue generated across an additional portfolio brand"]],
+      "sections": ["ind-hospitality"], "stories": ["sila"], "cases": ["case-01"],
+      "roster": [], "chips": []
+    },
+    {
+      "slug": "food-beverage", "cls": "fnb", "num": "02",
+      "name": "Food & Beverage",
+      "title_html": "Food<br><span class=\"accent\">&amp; Beverage.</span>",
+      "thesis": "When chai met Maggi, things got interesting.",
+      "brands": ["Chaipoint", "Samosa Party", "Krispy Kreme", "Be Soulfull"],
+      "proof": "1M+ YouTube views",
+      "cover": "chai-ig-01", "cover_thumb": "assets/thumbs/ig-C8pF5KSo_Qe.jpg",
+      "minis": ["chai-yt-01", "chai-yt-02", "chai-ig-03"],
+      "receipts": [["1M+", "YouTube views"], ["10K+", "Instagram likes"], ["5-person", "team managed"]],
+      "sections": ["ind-fnb"], "stories": ["chaipoint"], "cases": ["work", "case-03", "case-04"],
+      "roster": ["Be Soulfull"], "chips": []
+    },
+    {
+      "slug": "fashion", "cls": "fashion", "num": "03",
+      "name": "Fashion & D2C",
+      "title_html": "Fashion<br><span class=\"accent\">&amp; D2C.</span>",
+      "thesis": "Turned “scrolling” into shopping.",
+      "brands": ["Cahoot (prev. Campus Sutra)", "InstaFab Plus", "Sohi", "Haute Sauce"],
+      "proof": "3X ROI",
+      "cover": "cahoot-04", "cover_thumb": "assets/thumbs/ig-C1mTFzUP-bd.jpg",
+      "minis": ["celeb-02", "celeb-03", "cahoot-01"],
+      "receipts": [["3X ROI", "on influencer-led campaigns for Campus Sutra & Haute Sauce"], ["0 → 1", "Brand Ambassador Program built from scratch"], ["4", "new organic discovery platforms activated"]],
+      "sections": ["ind-fashion"], "stories": ["cahoot", "instafab"], "cases": [],
+      "roster": ["Haute Sauce", "Sohi"], "chips": []
+    },
+    {
+      "slug": "beauty", "cls": "beauty", "num": "04",
+      "name": "Beauty & Wellness",
+      "title_html": "Beauty<br><span class=\"accent\">&amp; Wellness.</span>",
+      "thesis": "Because the sale doesn't start on Instagram.",
+      "brands": ["Bella Vita Organic", "Vi-John", "Olaplex India", "Kevin Murphy India", "Dermalogica India", "Happier Skincare", "Vybe Beauty Fridge", "Detoxie Skincare", "Planet Herbs Lifesciences"],
+      "proof": "9 D2C brands",
+      "cover": "bellavita-01", "cover_thumb": "assets/thumbs/ig-CqftBD_jhPH.jpg",
+      "minis": ["olaplex-01", "vijohn-01", "dermalogica-01"],
+      "receipts": [["9", "D2C personal-care brands across the Chatterbox portfolio"]],
+      "sections": ["ind-beauty"], "stories": ["chatterbox"], "cases": [],
+      "roster": ["Vybe Beauty Fridge", "Happier Skincare"], "chips": ["Detoxie Skincare", "Planet Herbs Lifesciences"]
+    },
+    {
+      "slug": "entertainment", "cls": "ent", "num": "05",
+      "name": "Entertainment & Talent",
+      "title_html": "Entertainment<br><span class=\"accent\">&amp; Talent.</span>",
+      "thesis": "Where marketing meets the spotlight.",
+      "brands": ["Rapture Entertainment", "Parthiv Gohil", "Pratibha Singh"],
+      "proof": "Events & live shows",
+      "cover": null, "cover_type": ["Rapture", "Entertainment"], "cover_thumb": "assets/thumbs/ig-parthivgohil9.jpg",
+      "minis": ["rapture-01", "rapture-02"],
+      "receipts": [],
+      "sections": ["ind-culture"], "stories": [], "cases": [],
+      "roster": [], "chips": []
+    }
+  ]
+}
