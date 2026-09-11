@@ -945,3 +945,22 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
 .nc-cover-type, .nh-cover-type{display:grid; place-items:center; align-content:center; background:var(--accent, var(--cobalt)); color:var(--ivory); text-align:center; padding:24px;}
 .nc-cover-type .t, .nh-cover-type .t{font-family:var(--f-display); font-weight:900; font-size:clamp(32px,3.8vw,56px); line-height:.95; text-transform:uppercase; letter-spacing:-.01em;}
 .nc-cover-type .s, .nh-cover-type .s{font-family:var(--f-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; margin-top:14px; opacity:.92;}
+
+/* chips on dark grounds — .chip was drawn for light sections, so inside the
+   dark case-study / story blocks its charcoal text sat on charcoal (1.08:1) */
+.case-study .chip{color:var(--ivory); background:transparent; border-color:var(--line-light-strong);}
+
+/* Fashion's accent is butter, which on ivory is 1.55:1 — too faint even for
+   display type (3:1). On light grounds it becomes a highlighter under charcoal
+   text instead of the text colour, which keeps the accent and the contrast. */
+.nh-fashion .nh-title .accent{color:var(--charcoal); background:linear-gradient(transparent 60%, var(--butter) 60%, var(--butter) 92%, transparent 92%); padding:0 .06em;}
+
+/* Long single words ("Entertainment") must fit a 320px screen. */
+.nh-title{font-size:clamp(34px, 9vw, 118px); overflow-wrap:break-word;}
+.nc-cover-type .t, .nh-cover-type .t{font-size:clamp(22px, 6.5vw, 52px); overflow-wrap:anywhere;}
+
+/* 320px: a single unbreakable word sets a grid track's minimum, so the track
+   must be allowed below min-content, and the widest homepage heading
+   ("ONE MARKETING BRAIN." at 44px reached 322px) steps down one size. */
+@media (max-width:860px){ .nh-grid{grid-template-columns:minmax(0,1fr);} }
+@media (max-width:360px){ .industries-intro h2{font-size:40px;} }
