@@ -227,18 +227,34 @@ if(rw && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   }, 2200);
 }
 
-/* Scroll reveal */
-const revealEls = document.querySelectorAll('.reveal');
+/* Scroll reveal — an entrance animation, never a gate on seeing content.
+   .reveal starts at opacity:0, so if nothing ever adds .in-view the block is
+   simply invisible. The observer alone is not a guarantee: it is throttled in
+   background tabs and on slow devices, and it does not run for a block the
+   page jumped past on an anchor link (the "← All work" links land on
+   #niches). So: reveal whatever is already on screen straight away and again
+   after load and on hash changes, and after 2.5s reveal everything regardless. */
+const revealEls = [...document.querySelectorAll('.reveal')];
+const show = el => el.classList.add('in-view');
+const onScreen = el => { const r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; };
+const showOnScreen = () => revealEls.filter(onScreen).forEach(show);
+showOnScreen();
+window.addEventListener('load', showOnScreen);
+window.addEventListener('hashchange', showOnScreen);
 if('IntersectionObserver' in window){
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
-        entry.target.classList.add('in-view');
+        show(entry.target);
         io.unobserve(entry.target);
       }
     });
-  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+  // threshold 0, not a fraction: a block taller than viewport ÷ threshold
+  // (≈8 phone screens at 0.12) can never show that share of itself at once,
+  // so it would stay invisible forever. Any visible pixel now reveals it.
+  }, {threshold:0, rootMargin:'0px 0px -60px 0px'});
   revealEls.forEach(el => io.observe(el));
 } else {
-  revealEls.forEach(el => el.classList.add('in-view'));
+  revealEls.forEach(show);
 }
+setTimeout(() => revealEls.forEach(show), 2500);
