@@ -971,3 +971,6 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
 .njs-group .njs-tags{display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0;}
 .njs-group .njs-tags li{margin:0 !important; display:block;}
 .njs-group .njs-tags li span{display:inline-block; line-height:1.2;}
+
+/* a stamp is one object: on a narrow hero eyebrow "est. 2019" split into two lines */
+.stamp{white-space:nowrap;}
