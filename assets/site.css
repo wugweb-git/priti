@@ -964,3 +964,10 @@ footer{background:var(--charcoal); color:var(--ivory); padding:34px var(--pad) 4
    ("ONE MARKETING BRAIN." at 44px reached 322px) steps down one size. */
 @media (max-width:860px){ .nh-grid{grid-template-columns:minmax(0,1fr);} }
 @media (max-width:360px){ .industries-intro h2{font-size:40px;} }
+
+/* Legacy skill groups: the original tag spans are inline, so their vertical
+   padding reserved no line height and a wrapped second tag sat on top of the
+   first. Make each tag a real box and drop any inherited joining margins. */
+.njs-group .njs-tags{display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0;}
+.njs-group .njs-tags li{margin:0 !important; display:block;}
+.njs-group .njs-tags li span{display:inline-block; line-height:1.2;}
