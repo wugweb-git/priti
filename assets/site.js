@@ -1,4 +1,7 @@
 const MEDIA = window.MEDIA || [];
+/* Pages below the root set <html data-root="../"> so runtime-built paths
+   resolve from anywhere; the homepage leaves it empty. */
+const ROOT = document.documentElement.dataset.root || '';
 /* =====================================================================
    EDITABLE CONTENT — update this data as new project details come in.
    ===================================================================== */
@@ -22,11 +25,13 @@ const TINTS = ['rgba(229,67,43,.10)','rgba(240,189,62,.14)','rgba(39,67,214,.09)
                'rgba(240,120,154,.12)','rgba(107,107,58,.11)','rgba(201,180,140,.16)'];
 const tintFor = s => TINTS[[...String(s)].reduce((a,c)=>a + c.charCodeAt(0), 0) % TINTS.length];
 
+/* Fallback renderer only — scripts/normalize-media.mjs pre-renders every grid
+   into the HTML, so this runs only if that static markup is missing. */
 function mediaCard(it, showBrand){
   const isProfile = it.kind === 'profile';
   const platform  = it.platform === 'youtube' ? 'YouTube' : 'Instagram';
   const shot = it.status === 'available'
-    ? `<img src="${esc(it.thumbnail)}" alt="${esc(it.title || it.brand)}" loading="lazy" decoding="async">${isProfile ? '' : PLAY}`
+    ? `<img src="${esc(ROOT + it.thumbnail)}" alt="${esc(it.title || it.brand)}" loading="lazy" decoding="async">${isProfile ? '' : PLAY}`
     : `<div class="m-ph" style="--ph-tint:${tintFor(it.shortcode)}">
          <div class="m-ph-brand">${esc(it.brand)}</div>
          ${isProfile ? '' : `<div class="m-ph-code">${esc(it.shortcode)}</div>`}
@@ -49,8 +54,12 @@ function mediaCard(it, showBrand){
 document.querySelectorAll('.media-block').forEach(block => {
   const section  = block.dataset.media;
   const platform = block.dataset.platform;
+  const brand    = block.dataset.brand;
+  const brands   = block.dataset.brands ? block.dataset.brands.split('|') : null;
   const items = MEDIA.filter(m => m.section === section
     && (!platform || m.platform === platform)
+    && (!brand || m.brand === brand)
+    && (!brands || brands.includes(m.brand))
     && m.status !== 'dead');
   if(!items.length){ block.remove(); return; }
 
@@ -73,12 +82,18 @@ document.querySelectorAll('.media-block').forEach(block => {
   // a cached thumb that 404s must degrade to the placeholder, never a broken image
   block.querySelectorAll('.m-shot img').forEach(img => {
     img.addEventListener('error', () => {
-      const it = items.find(m => m.thumbnail === img.getAttribute('src')) || {};
+      const it = items.find(m => ROOT + m.thumbnail === img.getAttribute('src')) || {};
       img.outerHTML = `<div class="m-ph" style="--ph-tint:${tintFor(it.shortcode || '')}">
         <div class="m-ph-brand">${esc(it.brand || '')}</div>
         <div class="m-ph-code">${esc(it.shortcode || '')}</div></div>`;
     }, { once:true });
   });
+});
+
+/* Covers and thumbnail strips: a cached image that 404s is hidden rather than
+   shown broken; the tile's own background and label remain. */
+document.querySelectorAll('.mini img, .frame img, .nc-cover img, .nh-cover img').forEach(img => {
+  img.addEventListener('error', () => { img.style.visibility = 'hidden'; }, { once:true });
 });
 
 /* Lightbox — the official embed is fetched ONLY on click, so the page never
@@ -90,7 +105,7 @@ const lbOut   = document.getElementById('lbOut');
 
 function openLB(id){
   const it = MEDIA.find(m => m.id === id);
-  if(!it) return;
+  if(!it || !lb) return false;
   const src = it.platform === 'youtube'
     ? (it.embed || `https://www.youtube.com/embed/${it.shortcode}`) + '?autoplay=1'
     : it.url.replace(/\/?$/, '/') + 'embed/captioned/';
@@ -100,8 +115,10 @@ function openLB(id){
   lbOut.href = it.url;
   lb.classList.add('open');
   document.body.style.overflow = 'hidden';
+  return true;
 }
 function closeLB(){
+  if(!lb) return;
   lb.classList.remove('open');
   lbFrame.innerHTML = '';
   document.body.style.overflow = '';
@@ -109,10 +126,11 @@ function closeLB(){
 document.addEventListener('click', e => {
   const card = e.target.closest('[data-open]');
   // Without JS these are ordinary links to the post; with JS the lightbox wins.
-  if(card){ e.preventDefault(); openLB(card.dataset.open); return; }
-  if(e.target.closest('[data-lb-close]') || e.target === lb) closeLB();
+  // If the lightbox cannot open, the link is left to do its normal job.
+  if(card){ if(openLB(card.dataset.open)) e.preventDefault(); return; }
+  if(lb && (e.target.closest('[data-lb-close]') || e.target === lb)) closeLB();
 });
-document.addEventListener('keydown', e => { if(e.key === 'Escape' && lb.classList.contains('open')) closeLB(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape' && lb && lb.classList.contains('open')) closeLB(); });
 
 const BRANDS = [
   {name:"Chaipoint", cat:"fnb", role:"F&B — Brand & Campaigns", note:"Flagship F&B case study — Chaipoint × Maggi.", caps:["brand","campaigns"], link:"https://www.instagram.com/p/C8pF5KSo_Qe/"},
@@ -126,8 +144,8 @@ const BRANDS = [
   {name:"Olaplex India", cat:"beauty", role:"Premium Haircare", note:"Premium beauty portfolio.", caps:[], link:"https://www.instagram.com/p/DQjTwYdlcFy/"},
   {name:"Dermalogica India", cat:"beauty", role:"Premium Skincare", note:"Premium beauty portfolio.", caps:[], link:"https://www.instagram.com/dermalogicain"},
   {name:"Cahoot (prev. Campus Sutra)", cat:"fashion", role:"Consumer — Digital", note:"3X ROI through influencer marketing.", caps:["performance","influencer","digital"], link:"https://www.instagram.com/reel/CysVtHPytzf/"},
-  {name:"InstaFab Plus", cat:"fashion", role:"Consumer — Digital", note:"Scaled growth with a celebrity collaboration.", caps:["performance","influencer","digital"], link:null},
-  {name:"Sohi", cat:"fashion", role:"Consumer — Brand", note:"Celebrity-backed growth, alongside InstaFab Plus.", caps:["brand","performance","influencer"], link:null},
+  {name:"InstaFab Plus", cat:"fashion", role:"Consumer — Digital", note:"Scaled growth with a celebrity collaboration.", caps:["performance","influencer","digital"], link:"https://www.instagram.com/reel/C3P1A_JSCP4/"},
+  {name:"Sohi", cat:"fashion", role:"Consumer — Brand", note:"Celebrity-backed growth, alongside InstaFab Plus.", caps:["brand","performance","influencer"], link:"https://www.instagram.com/reel/C3P1A_JSCP4/"},
   {name:"Haute Sauce", cat:"lifestyle", role:"Consumer — Content", note:"3X ROI through influencer marketing.", caps:["content","performance","influencer"], link:null},
   {name:"Vybe Beauty Fridge", cat:"lifestyle", role:"ORM / Performance / Influencer", note:"Billionkart roster.", caps:["performance","influencer","social"], link:null},
   {name:"Pourdemistase", cat:"lifestyle", role:"Social Media Marketing", note:"Billionkart roster.", caps:["social"], link:null},
@@ -145,6 +163,8 @@ const BRANDS = [
   {name:"Parents As Teachers (PAT)", cat:"other", role:"Social Strategy", note:"Education influencer, Aprowress.", caps:["strategy","influencer","social"], link:null}
 ];
 
+/* Brand Archive — homepage only; every lookup is guarded so niche pages,
+   which have no archive, run the rest of this file untouched. */
 const grid = document.getElementById('archiveGrid');
 function renderArchive(filter){
   grid.innerHTML = "";
@@ -161,31 +181,36 @@ function renderArchive(filter){
           <div class="arc-role">${b.role}</div>
           <div class="arc-note">${b.note}</div>
         </div>
-        ${b.link ? `<a class="arc-link" href="${b.link}" target="_blank" rel="noopener">Visit brand ↗</a>` : `<span class="arc-link">[Add project details]</span>`}
+        ${b.link ? `<a class="arc-link" href="${b.link}" target="_blank" rel="noopener">Visit brand ↗</a>` : `<span class="arc-link">Details coming next</span>`}
       </div>`;
     grid.appendChild(el);
   });
 }
-renderArchive('all');
-document.getElementById('filterRow').addEventListener('click', (e) => {
-  const btn = e.target.closest('.filter-btn');
-  if(!btn) return;
-  document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
-  btn.classList.add('active'); btn.setAttribute('aria-pressed','true');
-  renderArchive(btn.dataset.filter);
-});
+const filterRow = document.getElementById('filterRow');
+if (grid && filterRow) {
+  renderArchive('all');
+  filterRow.addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-btn');
+    if(!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+    btn.classList.add('active'); btn.setAttribute('aria-pressed','true');
+    renderArchive(btn.dataset.filter);
+  });
+}
 
 /* Mobile menu */
 const burger = document.getElementById('burgerBtn');
 const mmenu = document.getElementById('mobileMenu');
-burger.addEventListener('click', () => {
-  const open = mmenu.classList.toggle('open');
-  burger.setAttribute('aria-expanded', open);
-});
-mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mmenu.classList.remove('open');
-  burger.setAttribute('aria-expanded', 'false');
-}));
+if (burger && mmenu) {
+  burger.addEventListener('click', () => {
+    const open = mmenu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mmenu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }));
+}
 
 /* Rotating badge */
 const words = ["Strategy","Content","Culture","Growth"];
